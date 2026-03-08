@@ -4,80 +4,51 @@
     padding-top: 5rem;
 }
 
+.footerTop {
+    padding-bottom: 3rem;
+}
+
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
     gap: 3rem;
-    margin-bottom: 3rem;
+}
+
+.brandInfo {
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
-    color: var(--text-primary);
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
-.logo span {
-    color: var(--accent-primary);
+.logo:hover {
+    transform: scale(1.02);
 }
 
 .description {
     color: var(--text-secondary);
-    max-width: 300px;
-}
-
-.linksBlock h3 {
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-.linksBlock nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.linksBlock a,
-.linksBlock p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-}
-
-.linksBlock nav a:hover {
-    color: var(--accent-primary);
-}
-
-.bottomBar {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1.5rem 0;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 320px;
 }
 
 .social {
     display: flex;
     gap: 1rem;
-    margin-top: 1.5rem;
 }
 
 .social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
     border: 1px solid var(--glass-border);
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -88,17 +59,140 @@
     background: var(--accent-primary);
     border-color: var(--accent-primary);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 68, 204, 0.4);
+    box-shadow: 0 10px 20px rgba(230, 0, 0, 0.2);
 }
 
-.linksBlock p {
+.linksBlock h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.linksBlock h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--accent-primary);
+    border-radius: 2px;
+}
+
+.linksBlock nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linksBlock nav a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    width: fit-content;
+}
+
+.navIcon {
+    margin-right: 8px;
+    color: var(--accent-primary);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.linksBlock nav a:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.linksBlock nav a:hover .navIcon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .contactIcon {
     color: var(--accent-primary);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.hoursList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.hoursList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.hoursList strong {
+    display: block;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.bottomBar {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 0;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.legalLinks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.legalLinks a {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.legalLinks a:hover {
+    color: var(--text-primary);
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -108,16 +202,48 @@
         text-align: center;
     }
 
+    .brandInfo {
+        align-items: center;
+    }
+
     .description {
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 2rem auto;
     }
 
-    .social {
-        justify-content: center;
+    .linksBlock h3::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .linksBlock p {
+    .linksBlock nav {
+        align-items: center;
+    }
+
+    .linksBlock nav a:hover {
+        transform: none;
+    }
+
+    .navIcon {
+        display: none;
+    }
+
+    .contactItem,
+    .hoursList li {
         justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contactItem span {
+        text-align: center;
+    }
+
+    .bottomContainer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
     }
 }
