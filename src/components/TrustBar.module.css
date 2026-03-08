@@ -1,0 +1,129 @@
+.trustBar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    /* ensure it sits above the hero overflow if placed tightly */
+}
+
+.label {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+
+.marqueeContainer {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Fading edges for the marquee */
+.marqueeContainer::before,
+.marqueeContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.marqueeContainer::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.marqueeContainer::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.marqueeContent {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+}
+
+/* Pause animation on hover for readability */
+.marqueeContainer:hover .marqueeContent {
+    animation-play-state: paused;
+}
+
+.brandWrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.brandName {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.brandName:hover {
+    color: var(--text-primary);
+}
+
+.separator {
+    color: var(--accent-primary);
+    margin-left: 3rem;
+    opacity: 0.5;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Move left by exactly one-third to loop seamlessly since we duplicated 3 times */
+        transform: translateX(-33.3333%);
+    }
+}
+
+@media (max-width: 768px) {
+    .trustBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .label {
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        padding: 0.75rem 1rem;
+    }
+
+    .marqueeContainer::before,
+    .marqueeContainer::after {
+        width: 40px;
+    }
+
+    .brandWrapper {
+        padding: 0.75rem 1rem;
+    }
+
+    .separator {
+        margin-left: 2rem;
+    }
+}

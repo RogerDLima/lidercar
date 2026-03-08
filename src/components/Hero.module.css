@@ -1,0 +1,169 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    /* offset for header */
+    overflow: hidden;
+    background-color: var(--bg-primary);
+}
+
+.bgWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.image {
+    opacity: 0.85;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(5, 5, 5, 0.98) 0%, rgba(5, 5, 5, 0.6) 100%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.textContent {
+    max-width: 800px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+    filter: drop-shadow(0 4px 12px rgba(0, 68, 204, 0.4));
+}
+
+.highlight::after {
+    /* Removed old solid underline for a cleaner modern look */
+    content: none;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.socialProof {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.socialProof strong {
+    color: var(--text-primary);
+}
+
+.decorativeElements {
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.line {
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary));
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 100px;
+    bottom: 200px;
+    animation: floatLine 6s ease-in-out infinite;
+}
+
+.circle {
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: radial-gradient(circle, rgba(0, 68, 204, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    position: absolute;
+    right: -300px;
+    bottom: -300px;
+    animation: pulseCircle 8s ease-in-out infinite;
+}
+
+/* Glass Button Styles mapped via regular globals, but we can add an extra glow class here if needed. 
+   We will rely on standard globals for buttons first. */
+
+@keyframes floatLine {
+
+    0%,
+    100% {
+        transform: rotate(-45deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-45deg) translateY(-20px);
+    }
+}
+
+@keyframes pulseCircle {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        align-items: center;
+        text-align: left;
+        padding-top: 100px;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

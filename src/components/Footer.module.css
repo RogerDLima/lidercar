@@ -1,0 +1,109 @@
+.footer {
+    background: linear-gradient(to bottom, var(--bg-primary), #050a14);
+    border-top: 1px solid var(--glass-border);
+    padding-top: 5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.logo span {
+    color: var(--accent-primary);
+}
+
+.description {
+    color: var(--text-secondary);
+    max-width: 300px;
+}
+
+.linksBlock h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.linksBlock nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.linksBlock a,
+.linksBlock p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.linksBlock nav a:hover {
+    color: var(--accent-primary);
+}
+
+.bottomBar {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    backdrop-filter: blur(5px);
+}
+
+.social a:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 68, 204, 0.4);
+}
+
+.linksBlock p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contactIcon {
+    color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

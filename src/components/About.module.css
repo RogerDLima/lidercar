@@ -1,0 +1,111 @@
+.section {
+    padding: var(--section-padding) 0;
+    background-color: var(--bg-primary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.imageContent {
+    position: relative;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.image {
+    transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.03);
+}
+
+.glassBadge {
+    position: absolute;
+    bottom: 2rem;
+    right: -2rem;
+    /* offset outside image for design */
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glassBadge strong {
+    font-size: 2rem;
+    color: var(--accent-primary);
+    line-height: 1;
+}
+
+.glassBadge span {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+}
+
+.textContent h2 {
+    font-size: 1rem;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+}
+
+.textContent h3 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.textContent p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.check {
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .glassBadge {
+        right: 2rem;
+    }
+}
