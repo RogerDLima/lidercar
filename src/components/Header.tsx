@@ -25,7 +25,7 @@ export default function Header() {
                         alt="LiderCar Logo"
                         width={180}
                         height={48}
-                        style={{ objectFit: 'contain', filter: 'drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.4)) drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8))' }}
+                        style={{ objectFit: 'contain', filter: 'drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.15)) drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.3))' }}
                         priority
                     />
                 </Link>

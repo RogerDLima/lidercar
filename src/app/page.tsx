@@ -3,6 +3,7 @@ import ScrollRevealStatement from "@/components/ScrollRevealStatement";
 import BugattiShowcase from "@/components/BugattiShowcase";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import TrustBarWithNames from "@/components/TrustBarWithNames";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <Hero />
       <TrustBar />
+      <TrustBarWithNames />
       <Stats />
       <BugattiShowcase />
       <About />
