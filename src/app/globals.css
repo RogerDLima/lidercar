@@ -23,6 +23,8 @@
 
   /* Spacing */
   --section-padding: clamp(4rem, 8vw, 8rem);
+  --section-padding-mobile: 3rem;
+  /* explicit mobile section padding */
   --container-width: 1200px;
 }
 
@@ -90,6 +92,12 @@ p {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
 }
 
 /* Component Utilities */

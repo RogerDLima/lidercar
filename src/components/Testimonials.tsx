@@ -3,7 +3,13 @@ import Image from "next/image";
 import RevealWrapper from "./RevealWrapper";
 
 export default function Testimonials() {
-    const reviews = Array.from({ length: 8 }, (_, i) => `/images/client/Feedbacks_reais/depoimento_${i + 1}.webp`);
+    // We manually map the array of existing files to avoid 404s
+    const reviews = [
+        "/images/client/Feedbacks_reais/depoimento_1.webp",
+        "/images/client/Feedbacks_reais/depoimento_3.webp",
+        "/images/client/Feedbacks_reais/depoimento_4.webp",
+        "/images/client/Feedbacks_reais/depoimento_8.webp"
+    ];
 
     return (
         <section id="depoimentos" className={styles.section}>

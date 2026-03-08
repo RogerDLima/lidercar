@@ -154,13 +154,23 @@
 @media (max-width: 768px) {
     .hero {
         align-items: center;
-        text-align: left;
-        padding-top: 100px;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .content {
+        align-items: center;
+        justify-items: center;
     }
 
     .actions {
         flex-direction: column;
         width: 100%;
+        align-items: center;
+    }
+
+    .socialProof {
+        margin: 0 auto;
     }
 
     .btn {
