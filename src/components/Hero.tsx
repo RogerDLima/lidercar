@@ -12,6 +12,7 @@ export default function Hero() {
                     alt="Oficina LiderCar Premium"
                     fill
                     priority
+                    sizes="100vw"
                     style={{ objectFit: 'cover' }}
                     className={styles.image}
                 />

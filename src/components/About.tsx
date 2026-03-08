@@ -13,6 +13,7 @@ export default function About() {
                             src="/images/service_engine.png"
                             alt="Mecânico analisando o motor na LiderCar"
                             fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             style={{ objectFit: 'cover' }}
                             className={styles.image}
                         />
