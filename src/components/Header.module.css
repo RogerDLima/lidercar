@@ -9,6 +9,15 @@
     border-bottom: 1px solid var(--glass-border);
 }
 
+.scrolled {
+    background: rgba(10, 10, 10, 0.85);
+    /* standard glass for desktop */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -49,5 +58,11 @@
     .navLinks {
         display: none;
         /* simple mobile design for now, can add hamburger later */
+    }
+
+    .scrolled {
+        background: rgba(5, 5, 5, 0.98);
+        /* darker and stronger for mobile readability */
+        backdrop-filter: blur(20px);
     }
 }

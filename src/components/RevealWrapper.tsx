@@ -21,8 +21,8 @@ export default function RevealWrapper({ children, className = "", delay = 0 }: R
                 }
             },
             {
-                threshold: 0.1, // Trigger when 10% of the element is visible
-                rootMargin: "0px 0px -50px 0px", // Trigger slightly before it hits the viewport
+                threshold: 0,
+                rootMargin: "0px 0px 200px 0px", // Trigger earlier so user doesn't wait
             }
         );
 

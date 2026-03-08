@@ -36,7 +36,7 @@ export default function Preloader() {
             </div>
 
             <div className={styles.text}>
-                <span>Iniciando o Motor</span><span className={styles.dots}>...</span>
+                <span>Ligando os motores</span><span className={styles.dots}>...</span>
             </div>
         </div>
     );
