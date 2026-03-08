@@ -1,0 +1,124 @@
+.section {
+    width: 100%;
+    padding: 6rem 0;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/hexabump.png');
+    background-color: var(--bg-tertiary);
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid var(--glass-border);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--text-primary);
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.animationHolder {
+    width: 100%;
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    transform: scale(0.8);
+    /* Scale back slightly to fit within containers better */
+}
+
+@media (max-width: 768px) {
+    .animationHolder {
+        transform: scale(0.3);
+        /* Mega scale down for tiny mobiles to fit the fixed 1000px rig */
+        height: 200px;
+    }
+}
+
+.bugattiV {
+    display: block;
+    width: 100%;
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.carhold1 {
+    height: 352px;
+    margin: 50px auto 0;
+    position: relative;
+    width: 980px;
+}
+
+.rulerHolderBox {
+    width: 900px;
+    height: 340px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.rulerWrap {
+    height: 370px;
+    position: relative;
+    width: 1000px;
+    z-index: 9999;
+}
+
+.rulerBox {
+    position: relative;
+    float: left;
+    width: 65px;
+    height: 347px;
+    margin: 4px;
+    border-left: 1px dashed #488fcd;
+    border-right: 1px dashed #488fcd;
+}
+
+.holdBox {
+    width: 978px;
+    height: 229px;
+    position: absolute;
+    top: 60px;
+    left: -50px;
+}
+
+.holdBox img {
+    opacity: 0;
+    /* JS will animate it */
+    position: absolute;
+}
+
+.rearBreak,
+.frontBreak {
+    bottom: 35px;
+}
+
+.stage2 {
+    position: absolute;
+    left: 45px;
+    width: 816px;
+    top: 52px;
+}
+
+.stage2 img {
+    position: absolute;
+}
+
+.veyronFullTire1 {
+    top: -133px;
+    left: 101px;
+}
+
+.veyronFullTire2 {
+    left: 476px;
+    top: -133px;
+}

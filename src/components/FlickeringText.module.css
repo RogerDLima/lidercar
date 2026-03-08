@@ -1,0 +1,41 @@
+.flicker {
+    animation: flickerLight 3s linear infinite;
+    display: inline-block;
+    /* Optional: override color if it needs to be explicitly the neon color */
+    color: var(--accent-primary);
+}
+
+@keyframes flickerLight {
+
+    0%,
+    19.9%,
+    22%,
+    62.9%,
+    64%,
+    64.9%,
+    70%,
+    100% {
+        opacity: 0.99;
+        text-shadow:
+            -1px -1px 0 rgba(255, 255, 255, 0.4),
+            1px -1px 0 rgba(255, 255, 255, 0.4),
+            -1px 1px 0 rgba(255, 255, 255, 0.4),
+            1px 1px 0 rgba(255, 255, 255, 0.4),
+            0 -2px 8px var(--accent-primary),
+            0 0 2px var(--accent-primary),
+            0 0 5px #0088ff,
+            0 0 15px rgba(255, 255, 255, 0.8),
+            0 0 2px var(--accent-primary),
+            0 2px 3px #000;
+    }
+
+    20%,
+    21.9%,
+    63%,
+    63.9%,
+    65%,
+    69.9% {
+        opacity: 0.6;
+        text-shadow: none;
+    }
+}

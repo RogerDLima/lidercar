@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import FlickeringText from "./FlickeringText";
 
 export default function Hero() {
     return (
@@ -23,7 +24,12 @@ export default function Hero() {
                 <div className={styles.textContent}>
                     <h1 className="animate-fade-in">
                         Somos apaixonados em servir, <br />
-                        <span className={styles.highlight}>seu carro.</span>
+                        <FlickeringText
+                            text="seu carro."
+                            flickerIndexes={[4, 5]}
+                            className={styles.highlight}
+                            as="span"
+                        />
                     </h1>
                     <p className={`animate-fade-in delay-100 ${styles.subtitle}`}>
                         A excelência em mecânica que você confia. Especialistas em manter o seu veículo sempre em alta performance, com transparência e qualidade premium.

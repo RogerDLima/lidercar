@@ -30,8 +30,8 @@
 .imageCard {
     position: relative;
     width: 100%;
-    /* The height will be derived intrinsically to maintain proportions depending on the screen size */
-    aspect-ratio: 9 / 16;
+    /* Google Reviews are horizontal rectangles. 16:9 fits horizontal text better */
+    aspect-ratio: 16 / 9;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -59,6 +59,11 @@
 
 .reviewImage {
     border-radius: 16px;
+    object-fit: contain !important;
+    /* Force contain so Google Reviews screenshots don't get chopped off */
+    background-color: var(--bg-tertiary);
+    /* Dark background behind it to blend naturally */
+    padding: 0.5rem;
 }
 
 @media (max-width: 1024px) {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Flickering Light Text Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- Tutorial:  https://texteffects.dev/posts/flickering-text-effect -->
+
+<div>
+	<h1 class="text" data-flicker="i" contenteditable>
+		Flicker
+	</h1>
+	<span class="text" aria-hidden="true">i</span>
+</div>
+
+<!-- Read up on why I don't use pseudo-elements, data attributes and the css content property, tldr it has accessibility issues. I've left the css in the code for when it is eventually supported, but for now the separate span is the most accessible option https://textlab.dev/posts/data-attributes-and-text-effects-->
+
+<!-- The div isnt really needed its just because this setup made it easier for me for editability, option without div and nested span here
+https://codepen.io/mandymichael/pen/OJGjXgO
+-->
+
+<fieldset>
+	<label for="flickerLetter">Letter</label>
+	<input type="text" id="flickerLetter" />
+	
+	<label for="flickerLetter">Offset</label>
+	<input type="text" id="flickerPosition" />
+</fieldset>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
