@@ -69,9 +69,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "LiderCar Oficina Mecânica",
+    "image": "https://lidercar.vercel.app/images/client/logo.webp",
+    "@id": "https://lidercar.vercel.app",
+    "url": "https://lidercar.vercel.app",
+    "telephone": "+55DD999999999", // Adjust later to the client's actual phone
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "800"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Local Business Address",
+      "addressLocality": "Cidade",
+      "addressRegion": "Estado",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  };
+
   return (
     <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

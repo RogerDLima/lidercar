@@ -1,6 +1,7 @@
 import styles from "./Services.module.css";
 import Image from "next/image";
 import { Settings, Droplet, Wrench, CircleDashed, ShieldAlert, Zap, Cog, Activity } from "lucide-react";
+import RevealWrapper from "./RevealWrapper";
 
 export default function Services() {
     const services = [
@@ -49,32 +50,34 @@ export default function Services() {
     return (
         <section id="servicos" className={styles.section}>
             <div className={`container ${styles.container}`}>
-                <div className={styles.header}>
+                <RevealWrapper className={styles.header}>
                     <h2>Nossos Serviços</h2>
                     <p>Especialistas em diagnóstico, manutenção e performance veicular.</p>
-                </div>
+                </RevealWrapper>
 
                 <div className={styles.grid}>
                     {services.map((service, index) => (
-                        <div key={index} className={styles.card}>
-                            <div className={styles.imageWrapper}>
-                                <Image
-                                    src={service.image}
-                                    alt={service.title}
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    className={styles.image}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
-                            </div>
-                            <div className={styles.content}>
-                                <div className={styles.iconWrapper}>
-                                    {service.icon}
+                        <RevealWrapper key={index} delay={index * 50}>
+                            <div className={styles.card}>
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        className={styles.image}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
-                                <h3>{service.title}</h3>
-                                <div className={styles.glow}></div>
+                                <div className={styles.content}>
+                                    <div className={styles.iconWrapper}>
+                                        {service.icon}
+                                    </div>
+                                    <h3>{service.title}</h3>
+                                    <div className={styles.glow}></div>
+                                </div>
                             </div>
-                        </div>
+                        </RevealWrapper>
                     ))}
                 </div>
             </div>

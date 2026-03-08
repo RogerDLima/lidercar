@@ -1,11 +1,12 @@
 import styles from "./About.module.css";
 import Image from "next/image";
+import RevealWrapper from "./RevealWrapper";
 
 export default function About() {
     return (
         <section id="sobre" className={styles.section}>
             <div className={`container ${styles.container}`}>
-                <div className={styles.imageContent}>
+                <RevealWrapper className={styles.imageContent}>
                     {/* using the AI generated engine picture as the "About Us" tech presentation */}
                     <div className={styles.imageWrapper}>
                         <Image
@@ -20,9 +21,9 @@ export default function About() {
                             <span>de Excelência</span>
                         </div>
                     </div>
-                </div>
+                </RevealWrapper>
 
-                <div className={styles.textContent}>
+                <RevealWrapper delay={150} className={styles.textContent}>
                     <h2>A LiderCar</h2>
                     <h3>Muito mais que uma oficina, a casa do seu carro.</h3>
                     <p>
@@ -48,7 +49,7 @@ export default function About() {
                     <a href="#contato" className="btn btn-primary" style={{ marginTop: '2rem' }}>
                         Falar com um Mecânico
                     </a>
-                </div>
+                </RevealWrapper>
             </div>
         </section>
     );

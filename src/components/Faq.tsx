@@ -1,5 +1,6 @@
 import styles from "./Faq.module.css";
 import { ChevronDown } from "lucide-react";
+import RevealWrapper from "./RevealWrapper";
 
 export default function Faq() {
     const faqs = [
@@ -24,22 +25,24 @@ export default function Faq() {
     return (
         <section id="faq" className={styles.section}>
             <div className={`container ${styles.container}`}>
-                <div className={styles.header}>
+                <RevealWrapper className={styles.header}>
                     <h2>Dúvidas Frequentes</h2>
                     <p>Tudo o que você precisa saber sobre nossos serviços.</p>
-                </div>
+                </RevealWrapper>
 
                 <div className={styles.faqList}>
                     {faqs.map((faq, i) => (
-                        <details key={i} className={styles.detailsGroup} name="faq">
-                            <summary className={styles.summary}>
-                                {faq.q}
-                                <ChevronDown className={styles.icon} />
-                            </summary>
-                            <div className={styles.answer}>
-                                <p>{faq.a}</p>
-                            </div>
-                        </details>
+                        <RevealWrapper key={i} delay={i * 100}>
+                            <details className={styles.detailsGroup} name="faq">
+                                <summary className={styles.summary}>
+                                    {faq.q}
+                                    <ChevronDown className={styles.icon} />
+                                </summary>
+                                <div className={styles.answer}>
+                                    <p>{faq.a}</p>
+                                </div>
+                            </details>
+                        </RevealWrapper>
                     ))}
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import styles from "./Differentials.module.css";
 import { CheckCircle2, Clock, ThumbsUp, Wrench, Shield, Award } from "lucide-react";
+import RevealWrapper from "./RevealWrapper";
 
 export default function Differentials() {
     const diffs = [
@@ -14,18 +15,20 @@ export default function Differentials() {
     return (
         <section id="diferenciais" className={styles.section}>
             <div className={`container ${styles.container}`}>
-                <div className={styles.header}>
+                <RevealWrapper className={styles.header}>
                     <h2>Por que escolher a LiderCar?</h2>
                     <p>Diferenciais fundamentais que garantem a segurança do seu investimento.</p>
-                </div>
+                </RevealWrapper>
 
                 <div className={styles.grid}>
                     {diffs.map((diff, index) => (
-                        <div key={index} className={styles.card}>
-                            <div className={styles.icon}>{diff.icon}</div>
-                            <h3>{diff.title}</h3>
-                            <p>{diff.text}</p>
-                        </div>
+                        <RevealWrapper key={index} delay={index * 100}>
+                            <div className={styles.card}>
+                                <div className={styles.icon}>{diff.icon}</div>
+                                <h3>{diff.title}</h3>
+                                <p>{diff.text}</p>
+                            </div>
+                        </RevealWrapper>
                     ))}
                 </div>
             </div>
