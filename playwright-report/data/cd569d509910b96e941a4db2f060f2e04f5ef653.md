@@ -1,0 +1,566 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - link "LiderCar Logo" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img "LiderCar Logo" [ref=e6]
+    - generic [ref=e7]:
+      - img "Oficina LiderCar Premium" [ref=e9]
+      - generic [ref=e12]:
+        - heading "Somos apaixonados em servir, seu c a rro." [level=1] [ref=e13]:
+          - text: Somos apaixonados em servir,
+          - generic [ref=e14]:
+            - text: seu
+            - generic [ref=e15]: c
+            - generic [ref=e16]: a
+            - text: rro.
+        - paragraph [ref=e17]: A excelência em mecânica que você confia. Especialistas em manter o seu veículo sempre em alta performance, com transparência e qualidade premium.
+        - generic [ref=e18]:
+          - link "Fazer Orçamento Grátis" [ref=e19] [cursor=pointer]:
+            - /url: https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento%20grátis%20na%20LiderCar!
+          - link "Ver Nossos Serviços" [ref=e20] [cursor=pointer]:
+            - /url: "#servicos"
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - img [ref=e23]
+            - img [ref=e25]
+            - img [ref=e27]
+            - img [ref=e29]
+            - img [ref=e31]
+          - generic [ref=e33]:
+            - strong [ref=e34]: 4.9/5
+            - text: baseado em +800 avaliações no Google
+    - generic [ref=e35]:
+      - generic [ref=e36]: "Especialistas em:"
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - img "Logo BMW" [ref=e40]
+          - generic [ref=e41]: •
+        - generic [ref=e42]:
+          - img "Logo Audi" [ref=e43]
+          - generic [ref=e44]: •
+        - generic [ref=e45]:
+          - img "Logo Mercedes-Benz" [ref=e46]
+          - generic [ref=e47]: •
+        - generic [ref=e48]:
+          - img "Logo Porsche" [ref=e49]
+          - generic [ref=e50]: •
+        - generic [ref=e51]:
+          - img "Logo Volvo" [ref=e52]
+          - generic [ref=e53]: •
+        - generic [ref=e54]:
+          - img "Logo Toyota" [ref=e55]
+          - generic [ref=e56]: •
+        - generic [ref=e57]:
+          - img "Logo Honda" [ref=e58]
+          - generic [ref=e59]: •
+        - generic [ref=e60]:
+          - img "Logo Ford" [ref=e61]
+          - generic [ref=e62]: •
+        - generic [ref=e63]:
+          - img "Logo BMW" [ref=e64]
+          - generic [ref=e65]: •
+        - generic [ref=e66]:
+          - img "Logo Audi" [ref=e67]
+          - generic [ref=e68]: •
+        - generic [ref=e69]:
+          - img "Logo Mercedes-Benz" [ref=e70]
+          - generic [ref=e71]: •
+        - generic [ref=e72]:
+          - img "Logo Porsche" [ref=e73]
+          - generic [ref=e74]: •
+        - generic [ref=e75]:
+          - img "Logo Volvo" [ref=e76]
+          - generic [ref=e77]: •
+        - generic [ref=e78]:
+          - img "Logo Toyota" [ref=e79]
+          - generic [ref=e80]: •
+        - generic [ref=e81]:
+          - img "Logo Honda" [ref=e82]
+          - generic [ref=e83]: •
+        - generic [ref=e84]:
+          - img "Logo Ford" [ref=e85]
+          - generic [ref=e86]: •
+        - generic [ref=e87]:
+          - img "Logo BMW" [ref=e88]
+          - generic [ref=e89]: •
+        - generic [ref=e90]:
+          - img "Logo Audi" [ref=e91]
+          - generic [ref=e92]: •
+        - generic [ref=e93]:
+          - img "Logo Mercedes-Benz" [ref=e94]
+          - generic [ref=e95]: •
+        - generic [ref=e96]:
+          - img "Logo Porsche" [ref=e97]
+          - generic [ref=e98]: •
+        - generic [ref=e99]:
+          - img "Logo Volvo" [ref=e100]
+          - generic [ref=e101]: •
+        - generic [ref=e102]:
+          - img "Logo Toyota" [ref=e103]
+          - generic [ref=e104]: •
+        - generic [ref=e105]:
+          - img "Logo Honda" [ref=e106]
+          - generic [ref=e107]: •
+        - generic [ref=e108]:
+          - img "Logo Ford" [ref=e109]
+          - generic [ref=e110]: •
+    - generic [ref=e111]: Opção 2 de Marcas (Com textos)
+    - generic [ref=e112]:
+      - generic [ref=e113]: "Especialistas em:"
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - img "Logo BMW" [ref=e117]
+          - generic [ref=e118]: BMW
+          - generic [ref=e119]: •
+        - generic [ref=e120]:
+          - img "Logo Audi" [ref=e121]
+          - generic [ref=e122]: Audi
+          - generic [ref=e123]: •
+        - generic [ref=e124]:
+          - img "Logo Mercedes-Benz" [ref=e125]
+          - generic [ref=e126]: Mercedes-Benz
+          - generic [ref=e127]: •
+        - generic [ref=e128]:
+          - img "Logo Porsche" [ref=e129]
+          - generic [ref=e130]: Porsche
+          - generic [ref=e131]: •
+        - generic [ref=e132]:
+          - img "Logo Volvo" [ref=e133]
+          - generic [ref=e134]: Volvo
+          - generic [ref=e135]: •
+        - generic [ref=e136]:
+          - img "Logo Toyota" [ref=e137]
+          - generic [ref=e138]: Toyota
+          - generic [ref=e139]: •
+        - generic [ref=e140]:
+          - img "Logo Honda" [ref=e141]
+          - generic [ref=e142]: Honda
+          - generic [ref=e143]: •
+        - generic [ref=e144]:
+          - img "Logo Ford" [ref=e145]
+          - generic [ref=e146]: Ford
+          - generic [ref=e147]: •
+        - generic [ref=e148]:
+          - img "Logo BMW" [ref=e149]
+          - generic [ref=e150]: BMW
+          - generic [ref=e151]: •
+        - generic [ref=e152]:
+          - img "Logo Audi" [ref=e153]
+          - generic [ref=e154]: Audi
+          - generic [ref=e155]: •
+        - generic [ref=e156]:
+          - img "Logo Mercedes-Benz" [ref=e157]
+          - generic [ref=e158]: Mercedes-Benz
+          - generic [ref=e159]: •
+        - generic [ref=e160]:
+          - img "Logo Porsche" [ref=e161]
+          - generic [ref=e162]: Porsche
+          - generic [ref=e163]: •
+        - generic [ref=e164]:
+          - img "Logo Volvo" [ref=e165]
+          - generic [ref=e166]: Volvo
+          - generic [ref=e167]: •
+        - generic [ref=e168]:
+          - img "Logo Toyota" [ref=e169]
+          - generic [ref=e170]: Toyota
+          - generic [ref=e171]: •
+        - generic [ref=e172]:
+          - img "Logo Honda" [ref=e173]
+          - generic [ref=e174]: Honda
+          - generic [ref=e175]: •
+        - generic [ref=e176]:
+          - img "Logo Ford" [ref=e177]
+          - generic [ref=e178]: Ford
+          - generic [ref=e179]: •
+        - generic [ref=e180]:
+          - img "Logo BMW" [ref=e181]
+          - generic [ref=e182]: BMW
+          - generic [ref=e183]: •
+        - generic [ref=e184]:
+          - img "Logo Audi" [ref=e185]
+          - generic [ref=e186]: Audi
+          - generic [ref=e187]: •
+        - generic [ref=e188]:
+          - img "Logo Mercedes-Benz" [ref=e189]
+          - generic [ref=e190]: Mercedes-Benz
+          - generic [ref=e191]: •
+        - generic [ref=e192]:
+          - img "Logo Porsche" [ref=e193]
+          - generic [ref=e194]: Porsche
+          - generic [ref=e195]: •
+        - generic [ref=e196]:
+          - img "Logo Volvo" [ref=e197]
+          - generic [ref=e198]: Volvo
+          - generic [ref=e199]: •
+        - generic [ref=e200]:
+          - img "Logo Toyota" [ref=e201]
+          - generic [ref=e202]: Toyota
+          - generic [ref=e203]: •
+        - generic [ref=e204]:
+          - img "Logo Honda" [ref=e205]
+          - generic [ref=e206]: Honda
+          - generic [ref=e207]: •
+        - generic [ref=e208]:
+          - img "Logo Ford" [ref=e209]
+          - generic [ref=e210]: Ford
+          - generic [ref=e211]: •
+    - generic [ref=e213]:
+      - generic [ref=e214]:
+        - generic [ref=e215]: 15+
+        - generic [ref=e216]: Anos de Mercado
+      - generic [ref=e217]:
+        - generic [ref=e218]: 5000+
+        - generic [ref=e219]: Carros Atendidos
+      - generic [ref=e220]:
+        - generic [ref=e221]: 100%
+        - generic [ref=e222]: Transparência
+      - generic [ref=e223]:
+        - generic [ref=e224]: "4.9"
+        - generic [ref=e225]: Estrelas nas Avaliações
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - heading "Processo de Montagem" [level=2] [ref=e228]
+        - paragraph [ref=e229]: Engenharia automotiva levada ao expoente máximo.
+      - generic [ref=e232]:
+        - generic [ref=e248]:
+          - img "Bumper" [ref=e249]
+          - img "Frame" [ref=e250]
+          - img "Siding" [ref=e251]
+          - img "Fender" [ref=e252]
+          - img "Tire 1" [ref=e253]
+          - img "Tire 2" [ref=e254]
+          - img "Window" [ref=e255]
+          - img "Front Break" [ref=e256]
+          - img "Rear Break" [ref=e257]
+        - generic [ref=e258]:
+          - img "Bugatti Full" [ref=e259]
+          - img "Tire 1" [ref=e260]
+          - img "Tire 2" [ref=e261]
+    - generic [ref=e263]:
+      - generic [ref=e265]:
+        - img "Mecânico analisando o motor na LiderCar" [ref=e266]
+        - generic [ref=e267]:
+          - strong [ref=e268]: 15 Anos
+          - generic [ref=e269]: de Excelência
+      - generic [ref=e270]:
+        - heading "A LiderCar" [level=2] [ref=e271]
+        - heading "Muito mais que uma oficina, a casa do seu carro." [level=3] [ref=e272]
+        - paragraph [ref=e273]: "Nascemos com um propósito claro: revolucionar o padrão de manutenção automotiva. Entendemos que seu veículo não é apenas um meio de transporte, mas uma parte fundamental do seu dia a dia."
+        - paragraph [ref=e274]:
+          - text: É por isso que na
+          - strong [ref=e275]: LiderCar
+          - text: ", investimos pesado em tecnologia de diagnóstico de ponta e capacitação contínua da nossa equipe de engenheiros mecatrônicos e técnicos especializados. Nosso compromisso é entregar a você transparência absoluta em cada orçamento e agilidade na entrega."
+        - generic [ref=e276]:
+          - generic [ref=e277]:
+            - generic [ref=e278]: ✓
+            - text: Transparência 100%
+          - generic [ref=e279]:
+            - generic [ref=e280]: ✓
+            - text: Peças Originais
+          - generic [ref=e281]:
+            - generic [ref=e282]: ✓
+            - text: Garantia Estendida
+          - generic [ref=e283]:
+            - generic [ref=e284]: ✓
+            - text: Equipe Especializada
+        - link "Falar com um Mecânico" [ref=e285] [cursor=pointer]:
+          - /url: "#contato"
+    - generic [ref=e287]:
+      - generic [ref=e288]:
+        - heading "Nossos Serviços" [level=2] [ref=e289]
+        - paragraph [ref=e290]: Especialistas em diagnóstico, manutenção e performance veicular.
+      - generic [ref=e291]:
+        - generic [ref=e293]:
+          - img "Mecânica em Geral" [ref=e295]
+          - generic [ref=e296]:
+            - img [ref=e298]
+            - heading "Mecânica em Geral" [level=3] [ref=e301]
+        - generic [ref=e303]:
+          - img "Pneus" [ref=e305]
+          - generic [ref=e306]:
+            - img [ref=e308]
+            - heading "Pneus" [level=3] [ref=e317]
+        - generic [ref=e319]:
+          - img "Alinhamento" [ref=e321]
+          - generic [ref=e322]:
+            - img [ref=e324]
+            - heading "Alinhamento" [level=3] [ref=e326]
+        - generic [ref=e328]:
+          - img "Balanceamento" [ref=e330]
+          - generic [ref=e331]:
+            - img [ref=e333]
+            - heading "Balanceamento" [level=3] [ref=e344]
+        - generic [ref=e346]:
+          - img "Suspensão" [ref=e348]
+          - generic [ref=e349]:
+            - img [ref=e351]
+            - heading "Suspensão" [level=3] [ref=e353]
+        - generic [ref=e355]:
+          - img "Freios" [ref=e357]
+          - generic [ref=e358]:
+            - img [ref=e360]
+            - heading "Freios" [level=3] [ref=e362]
+        - generic [ref=e364]:
+          - img "Troca de Óleo" [ref=e366]
+          - generic [ref=e367]:
+            - img [ref=e369]
+            - heading "Troca de Óleo" [level=3] [ref=e371]
+        - generic [ref=e373]:
+          - img "Escapamento" [ref=e375]
+          - generic [ref=e376]:
+            - img [ref=e378]
+            - heading "Escapamento" [level=3] [ref=e380]
+    - generic [ref=e382]:
+      - generic [ref=e383]:
+        - heading "Por que escolher a LiderCar?" [level=2] [ref=e384]
+        - paragraph [ref=e385]: Diferenciais fundamentais que garantem a segurança do seu investimento.
+      - generic [ref=e386]:
+        - generic [ref=e388]:
+          - img [ref=e390]
+          - heading "Transparência 100%" [level=3] [ref=e393]
+          - paragraph [ref=e394]: Orçamentos claros, com vídeos e fotos das peças que precisam de troca.
+        - generic [ref=e396]:
+          - img [ref=e398]
+          - heading "Peças Originais" [level=3] [ref=e400]
+          - paragraph [ref=e401]: Trabalhamos apenas com peças de reposição genuínas e homologadas.
+        - generic [ref=e403]:
+          - img [ref=e405]
+          - heading "Entrega no Prazo" [level=3] [ref=e408]
+          - paragraph [ref=e409]: Respeitamos o seu tempo. Quando prometemos a entrega, nós cumprimos.
+        - generic [ref=e411]:
+          - img [ref=e413]
+          - heading "Garantia Estendida" [level=3] [ref=e415]
+          - paragraph [ref=e416]: Cobertura completa em serviços e peças para sua total tranquilidade.
+        - generic [ref=e418]:
+          - img [ref=e420]
+          - heading "Mecânicos Experts" [level=3] [ref=e422]
+          - paragraph [ref=e423]: Profissionais treinados nas montadoras e especialistas em alta performance.
+        - generic [ref=e425]:
+          - img [ref=e427]
+          - heading "Tecnologia de Ponta" [level=3] [ref=e430]
+          - paragraph [ref=e431]: Equipamentos de diagnóstico avançados compatíveis com todas as marcas.
+    - generic [ref=e432]:
+      - generic [ref=e433]:
+        - heading "O que nossos clientes dizem" [level=2] [ref=e434]
+        - paragraph [ref=e435]: Nossa reputação é nosso maior ativo.
+      - generic [ref=e436]:
+        - generic [ref=e437]:
+          - generic [ref=e438]:
+            - img "Marcelo A." [ref=e440]
+            - generic [ref=e441]:
+              - paragraph [ref=e442]: Marcelo A.
+              - paragraph [ref=e443]: Cliente Verificado
+          - generic [ref=e444]:
+            - heading "Atendimento impecável e total transparência na negociação." [level=4] [ref=e445]
+            - paragraph [ref=e446]: “ O processo de avaliação e escolha do meu carro foi excelente. Estava receoso de trocar meu esportivo, mas a equipe de especialistas passou muita confiança e entregaram exatamente o combinado. ”
+        - generic [ref=e447]:
+          - generic [ref=e448]:
+            - img "Roberto F." [ref=e450]
+            - generic [ref=e451]:
+              - paragraph [ref=e452]: Roberto F.
+              - paragraph [ref=e453]: Cliente Verificado
+          - generic [ref=e454]:
+            - heading "Especialistas de verdade." [level=4] [ref=e455]
+            - paragraph [ref=e456]: “ Encontrei exatamente a configuração que eu buscava. Um atendimento premium, sem a burocracia das concessionárias tradicionais. ”
+        - generic [ref=e457]:
+          - generic [ref=e458]:
+            - img "Juliana S." [ref=e460]
+            - generic [ref=e461]:
+              - paragraph [ref=e462]: Juliana S.
+              - paragraph [ref=e463]: Cliente Verificado
+          - generic [ref=e464]:
+            - heading "Segurança documental e tranquilidade." [level=4] [ref=e465]
+            - paragraph [ref=e466]: “ Comprei um XC90 blindado para a família. A revisão minuciosa que eles fazem no veículo antes da entrega me deram total tranquilidade. Recomendo de olhos fechados pela integridade documental e vistorias rigorosas que realizam. ”
+        - generic [ref=e467]:
+          - generic [ref=e468]:
+            - img "Carlos T." [ref=e470]
+            - generic [ref=e471]:
+              - paragraph [ref=e472]: Carlos T.
+              - paragraph [ref=e473]: Cliente Verificado
+          - generic [ref=e474]:
+            - heading "Avaliação justa no meu usado." [level=4] [ref=e475]
+            - paragraph [ref=e476]: “ O processo de troca e avaliação do meu antigo veículo foi rápido, transparente e com um retorno bem acima do mercado tradicional. ”
+        - generic [ref=e477]:
+          - generic [ref=e478]:
+            - img "Thiago M." [ref=e480]
+            - generic [ref=e481]:
+              - paragraph [ref=e482]: Thiago M.
+              - paragraph [ref=e483]: Cliente Verificado
+          - generic [ref=e484]:
+            - heading "A experiência premium anunciada é real e a entrega em domicílio facilita demais a vida." [level=4] [ref=e485]
+            - paragraph [ref=e486]: “ O consultor me atendeu com exclusividade pelo WhatsApp, esclareceu todas as dúvidas sobre o híbrido e ainda entregaram o carro diretamente na garagem da minha casa no mesmo dia em que o pagamento compensou. ”
+    - generic [ref=e487]: Opção 2 de Depoimentos (Abaixo)
+    - generic [ref=e489]:
+      - generic [ref=e490]:
+        - heading "O que nossos clientes dizem" [level=2] [ref=e491]
+        - paragraph [ref=e492]: Resultados reais de quem já confia na LiderCar.
+      - generic [ref=e493]:
+        - img "Depoimento 1" [ref=e494]
+        - img "Depoimento 2" [ref=e495]
+        - img "Depoimento 3" [ref=e496]
+        - img "Depoimento 4" [ref=e497]
+        - img "Depoimento 5" [ref=e498]
+        - img "Depoimento 6" [ref=e499]
+        - img "Depoimento 7" [ref=e500]
+        - img "Depoimento 8" [ref=e501]
+    - generic [ref=e502]: Opção 3 de Depoimentos (Carrossel Embla Abaixo)
+    - generic [ref=e503]:
+      - generic [ref=e504]:
+        - heading "O que nossos clientes dizem" [level=2] [ref=e505]
+        - paragraph [ref=e506]: A excelência medida pela satisfação de quem confia em nosso trabalho.
+      - generic "Carrossel de depoimentos" [ref=e507]:
+        - generic [ref=e509]:
+          - article [ref=e511]:
+            - img "Carlos Mendes" [ref=e513]
+            - paragraph [ref=e514]: "\"O nível de atenção aos detalhes e o cuidado no transporte da minha 911 GT3 foi impressionante. Equipe pontual e altamente profissional. Recomendo de olhos fechados.\""
+            - paragraph [ref=e515]: "- Carlos Mendes, Empresário"
+          - article [ref=e517]:
+            - img "Roberto Almeida" [ref=e519]
+            - paragraph [ref=e520]: "\"A LiderCar é a única empresa em que confio para mover minha frota. O atendimento premium e o seguro completo me dão a paz de espírito que preciso.\""
+            - paragraph [ref=e521]: "- Roberto Almeida, Colecionador"
+          - article [ref=e523]:
+            - img "Marina Costa" [ref=e525]
+            - paragraph [ref=e526]: "\"Serviço impecável do início ao fim. Comprei um carro em outro estado e a LiderCar cuidou de toda a logística com máxima transparência e segurança.\""
+            - paragraph [ref=e527]: "- Marina Costa, Diretora Comercial"
+          - article [ref=e529]:
+            - img "Eduardo Silva" [ref=e531]
+            - paragraph [ref=e532]: "\"Logística automotiva de verdade! Sempre que preciso levar carros para track days, a LiderCar resolve. Eficiência e segurança sem igual.\""
+            - paragraph [ref=e533]: "- Eduardo Silva, Piloto Profissional"
+          - article [ref=e535]:
+            - img "Fernanda Lima" [ref=e537]
+            - paragraph [ref=e538]: "\"Precisei transportar meu SUV blindado de última hora e a LiderCar foi super ágil. O motorista era muito educado e o carro chegou impecável.\""
+            - paragraph [ref=e539]: "- Fernanda Lima, Médica"
+        - generic "Controles do carrossel" [ref=e540]:
+          - button "Depoimento anterior" [ref=e541] [cursor=pointer]
+          - tablist "Escolher depoimento" [ref=e543]:
+            - tab "Ir para o depoimento 1" [selected] [ref=e544] [cursor=pointer]
+            - tab "Ir para o depoimento 2" [ref=e545] [cursor=pointer]
+            - tab "Ir para o depoimento 3" [ref=e546] [cursor=pointer]
+            - tab "Ir para o depoimento 4" [ref=e547] [cursor=pointer]
+            - tab "Ir para o depoimento 5" [ref=e548] [cursor=pointer]
+          - button "Próximo depoimento" [ref=e549] [cursor=pointer]
+    - generic [ref=e552]:
+      - generic [ref=e553]:
+        - heading "Dúvidas Frequentes" [level=2] [ref=e554]
+        - paragraph [ref=e555]: Tudo o que você precisa saber sobre nossos serviços.
+      - generic [ref=e556]:
+        - generic [ref=e558]:
+          - generic [ref=e559] [cursor=pointer]:
+            - text: Vocês atendem carros importados?
+            - img [ref=e560]
+          - paragraph [ref=e562]: Sim! Nossa equipe possui treinamento específico em marcas premium como BMW, Mercedes-Benz, Audi, Porsche e Volvo, com equipamentos de diagnóstico próprios para essas montadoras.
+        - generic [ref=e564]:
+          - generic [ref=e565] [cursor=pointer]:
+            - text: Preciso agendar atendimento ou posso ir direto?
+            - img [ref=e566]
+          - paragraph [ref=e568]: Para garantir agilidade no seu atendimento, recomendamos sempre o agendamento via WhatsApp. Porém, atendimentos emergenciais (luzes de alerta no painel, vazamentos) podem ser recebidos a qualquer momento.
+        - generic [ref=e570]:
+          - generic [ref=e571] [cursor=pointer]:
+            - text: As peças utilizadas têm garantia?
+            - img [ref=e572]
+          - paragraph [ref=e574]: Absolutamente! Utilizamos somente peças originais ou de primeira linha das melhores marcas do mercado. Todas as peças e nossa mão de obra possuem garantia de no mínimo 90 dias (podendo se estender de acordo com o componente).
+        - generic [ref=e576]:
+          - generic [ref=e577] [cursor=pointer]:
+            - text: Fazem parcelamento dos serviços?
+            - img [ref=e578]
+          - paragraph [ref=e580]: Sim, pensando no seu conforto, dividimos os orçamentos em até 10x sem juros no cartão de crédito nas revisões completas.
+        - generic [ref=e582]:
+          - generic [ref=e583] [cursor=pointer]:
+            - text: Quais formas de pagamento vocês aceitam?
+            - img [ref=e584]
+          - paragraph [ref=e586]: Aceitamos todos os cartões de crédito (parcelamento em até 10x dependendo do serviço), Pix, transferência bancária (TED) e dinheiro em espécie.
+        - generic [ref=e588]:
+          - generic [ref=e589] [cursor=pointer]:
+            - text: A oficina oferece serviço de leva e traz?
+            - img [ref=e590]
+          - paragraph [ref=e592]: Sim! Trabalhamos com serviço de leva e traz gratuito para clientes num raio de até 15km da nossa oficina para agendamentos programados.
+        - generic [ref=e594]:
+          - generic [ref=e595] [cursor=pointer]:
+            - text: Quanto tempo demora uma revisão básica?
+            - img [ref=e596]
+          - paragraph [ref=e598]: Uma revisão preventiva padrão (troca de óleo, filtros, alinhamento e inspeção de 40 itens) leva em média de 2 a 3 horas, podendo aguardar em nossa sala de espera premium.
+        - generic [ref=e600]:
+          - generic [ref=e601] [cursor=pointer]:
+            - text: Vocês fazem manutenção em veículos fora de garantia da concessionária?
+            - img [ref=e602]
+          - paragraph [ref=e604]: Com certeza. Essa é a nossa especialidade! Oferecemos qualidade de concessionária com preços mais justos, preservando a originalidade do seu carro.
+    - link "EXPERIÊNCIA PREMIUM FALE COM UM CONSULTOR" [ref=e606] [cursor=pointer]:
+      - /url: https://wa.me/5511999999999?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20gr%C3%A1tis%20na%20LiderCar!
+      - heading "EXPERIÊNCIA PREMIUM FALE COM UM CONSULTOR" [level=2] [ref=e607]:
+        - text: EXPERIÊNCIA PREMIUM
+        - generic [ref=e608]: FALE COM UM CONSULTOR
+    - link "Fale conosco no WhatsApp" [ref=e610] [cursor=pointer]:
+      - /url: https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20LiderCar.
+      - img [ref=e612]
+      - generic [ref=e614]: "1"
+    - generic [ref=e616]:
+      - generic [ref=e618]:
+        - generic [ref=e619]:
+          - link "LiderCar Logo" [ref=e620] [cursor=pointer]:
+            - /url: /
+            - img "LiderCar Logo" [ref=e621]
+          - paragraph [ref=e622]: O mais alto padrão em mecânica premium. Nosso compromisso é entregar excelência, tecnologia e transparência para prolongar a vida útil do seu veículo.
+          - generic [ref=e623]:
+            - link "Instagram" [ref=e624] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e625]
+            - link "Facebook" [ref=e628] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e629]
+        - generic [ref=e631]:
+          - heading "Institucional" [level=3] [ref=e632]
+          - navigation [ref=e633]:
+            - link "Início" [ref=e634] [cursor=pointer]:
+              - /url: /
+            - link "Nossa História" [ref=e635] [cursor=pointer]:
+              - /url: "#sobre"
+            - link "Serviços Restauração" [ref=e636] [cursor=pointer]:
+              - /url: "#servicos"
+            - link "Depoimentos" [ref=e637] [cursor=pointer]:
+              - /url: "#depoimentos"
+        - generic [ref=e638]:
+          - heading "Atendimento" [level=3] [ref=e639]
+          - paragraph [ref=e640]:
+            - img [ref=e641]
+            - generic [ref=e643]: (11) 99999-9999
+          - paragraph [ref=e644]:
+            - img [ref=e645]
+            - generic [ref=e648]: contato@lidercar.com.br
+          - paragraph [ref=e649]:
+            - img [ref=e650]
+            - generic [ref=e653]:
+              - text: Av. Principal, 1000
+              - text: São Paulo, SP
+        - generic [ref=e654]:
+          - heading "Horário de Funcionamento" [level=3] [ref=e655]
+          - list [ref=e656]:
+            - listitem [ref=e657]:
+              - img [ref=e658]
+              - generic [ref=e661]:
+                - strong [ref=e662]: "Seg - Sex:"
+                - text: 08:00 - 18:00
+            - listitem [ref=e663]:
+              - img [ref=e664]
+              - generic [ref=e667]:
+                - strong [ref=e668]: "Sábado:"
+                - text: 08:00 - 12:00
+            - listitem [ref=e669]:
+              - img [ref=e670]
+              - generic [ref=e673]:
+                - strong [ref=e674]: "Domingo / Feriados:"
+                - text: Fechado
+      - generic [ref=e676]:
+        - paragraph [ref=e677]: © 2026 LiderCar. Todos os direitos reservados.
+        - generic [ref=e678]:
+          - link "Política de Privacidade" [ref=e679] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=e680]: "|"
+          - link "Termos de Serviço" [ref=e681] [cursor=pointer]:
+            - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e687] [cursor=pointer]:
+    - img [ref=e688]
+  - alert [ref=e691]
+```

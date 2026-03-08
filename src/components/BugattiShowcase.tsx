@@ -163,29 +163,29 @@ export default function BugattiShowcase() {
                             </section>
 
                             <section className={styles.veyron_hold_box}>
-                                <img className={styles.veyron_bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Bumper" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Bumper" />
                                 {' '}
-                                <img className={styles.veyron_frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Frame" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Frame" />
                                 {' '}
-                                <img className={styles.veyron_siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Siding" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Siding" />
                                 {' '}
-                                <img className={styles.veyron_fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Fender" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Fender" />
                                 {' '}
-                                <img className={styles.veyron_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 1" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 1" />
                                 {' '}
-                                <img className={styles.veyron_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 2" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 2" />
                                 {' '}
-                                <img className={styles.veyron_window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Window" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Window" />
                                 {' '}
-                                <img className={styles.veyron_front_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Front Break" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_front_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Front Break" />
                                 {' '}
-                                <img className={styles.veyron_rear_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Rear Break" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_rear_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Rear Break" />
                             </section>
 
                             <section className={styles.stage_2}>
-                                <img className={styles.bugatti_veyron} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v.png" alt="Bugatti Full" />
-                                <img className={styles.bugatti_v_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 1" />
-                                <img className={styles.bugatti_v_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 2" />
+                                <img loading="lazy" decoding="async" className={styles.bugatti_veyron} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v.png" alt="Bugatti Full" />
+                                <img loading="lazy" decoding="async" className={styles.bugatti_v_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 1" />
+                                <img loading="lazy" decoding="async" className={styles.bugatti_v_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 2" />
                             </section>
 
                         </section>

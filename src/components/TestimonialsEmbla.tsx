@@ -88,7 +88,7 @@ export default function TestimonialsEmbla() {
                 <p>A excelência medida pela satisfação de quem confia em nosso trabalho.</p>
             </div>
 
-            <div className={styles.embla} aria-label="Testimonials carousel">
+            <div className={styles.embla} aria-label="Carrossel de depoimentos">
                 <div className={styles.emblaViewport} ref={emblaRef}>
                     <div className={styles.emblaContainer}>
                         {testimonials.map((testimonial, index) => (
@@ -115,17 +115,17 @@ export default function TestimonialsEmbla() {
                     </div>
                 </div>
 
-                <div className={styles.emblaControls} aria-label="Carousel controls">
+                <div className={styles.emblaControls} aria-label="Controles do carrossel">
                     <button
                         className={styles.emblaBtn}
                         onClick={scrollPrev}
                         type="button"
-                        aria-label="Previous testimonial"
+                        aria-label="Depoimento anterior"
                     >
                         <span aria-hidden="true" className={`${styles.chev} ${styles.chevLeft}`}></span>
                     </button>
 
-                    <div className={styles.emblaDots} role="tablist" aria-label="Choose testimonial">
+                    <div className={styles.emblaDots} role="tablist" aria-label="Escolher depoimento">
                         {scrollSnaps.map((_, index) => (
                             <button
                                 key={index}
@@ -133,7 +133,7 @@ export default function TestimonialsEmbla() {
                                 className={`${styles.emblaDot} ${index === selectedIndex ? styles.emblaDotSelected : ''}`}
                                 onClick={() => scrollTo(index)}
                                 role="tab"
-                                aria-label={`Go to testimonial ${index + 1}`}
+                                aria-label={`Ir para o depoimento ${index + 1}`}
                                 aria-selected={index === selectedIndex}
                             />
                         ))}
@@ -143,7 +143,7 @@ export default function TestimonialsEmbla() {
                         className={styles.emblaBtn}
                         onClick={scrollNext}
                         type="button"
-                        aria-label="Next testimonial"
+                        aria-label="Próximo depoimento"
                     >
                         <span aria-hidden="true" className={`${styles.chev} ${styles.chevRight}`}></span>
                     </button>

@@ -34,10 +34,10 @@ export default function ScrollRevealStatement({ primaryText, hoverText, href }: 
     }, { scope: containerRef });
 
     const content = (
-        <h1 ref={textRef} className={styles.text}>
+        <h2 ref={textRef} className={styles.text}>
             {primaryText}
             <span>{hoverText}</span>
-        </h1>
+        </h2>
     );
 
     return (
