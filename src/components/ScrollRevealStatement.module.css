@@ -9,7 +9,7 @@
 }
 
 .text {
-    font-size: clamp(3rem, 8vw, 8rem);
+    font-size: clamp(2rem, 5vw, 5rem);
     letter-spacing: -.02em;
     line-height: 100%;
     margin: 0;

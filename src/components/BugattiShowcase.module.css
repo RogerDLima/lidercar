@@ -6,11 +6,16 @@
     overflow: hidden;
     position: relative;
     border-top: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header {
     text-align: center;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
 }
 
 .header h2 {
@@ -23,22 +28,42 @@
     font-size: 1.1rem;
 }
 
-.animationHolder {
+.scaleWrapper {
     width: 100%;
-    position: relative;
-    height: 400px;
     display: flex;
     justify-content: center;
-    transform: scale(0.8);
-    /* Scale back slightly to fit within containers better */
+    align-items: center;
+    /* We let JS handle the scale or we can use CSS scale based on vw */
+    transform: scale(1);
+    transform-origin: top center;
+}
+
+@media (max-width: 1024px) {
+    .scaleWrapper {
+        transform: scale(0.8);
+    }
 }
 
 @media (max-width: 768px) {
-    .animationHolder {
-        transform: scale(0.3);
-        /* Mega scale down for tiny mobiles to fit the fixed 1000px rig */
+    .scaleWrapper {
+        transform: scale(0.45);
         height: 200px;
     }
+}
+
+@media (max-width: 480px) {
+    .scaleWrapper {
+        transform: scale(0.35);
+        height: 150px;
+    }
+}
+
+/* Original absolute definitions mapped */
+.animationHolder {
+    width: 980px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .bugattiV {
@@ -54,16 +79,17 @@
     margin: 50px auto 0;
     position: relative;
     width: 980px;
+    float: left;
 }
 
 .rulerHolderBox {
     width: 900px;
     height: 340px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 
 .rulerWrap {
@@ -81,9 +107,18 @@
     margin: 4px;
     border-left: 1px dashed #488fcd;
     border-right: 1px dashed #488fcd;
+    /* Initial states for GSAP */
+    height: 0;
+    opacity: 0;
 }
 
-.holdBox {
+.rulerHorizontal2 {
+    position: relative;
+    height: 0;
+    width: 891px;
+}
+
+.veyronHoldBox {
     width: 978px;
     height: 229px;
     position: absolute;
@@ -91,15 +126,9 @@
     left: -50px;
 }
 
-.holdBox img {
+.veyronHoldBox img {
     opacity: 0;
-    /* JS will animate it */
     position: absolute;
-}
-
-.rearBreak,
-.frontBreak {
-    bottom: 35px;
 }
 
 .stage2 {
@@ -121,4 +150,9 @@
 .veyronFullTire2 {
     left: 476px;
     top: -133px;
+}
+
+.rearBreak,
+.frontBreak {
+    bottom: 35px;
 }

@@ -60,9 +60,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: '/images/client/logo.webp',
-  },
 };
 
 export default function RootLayout({

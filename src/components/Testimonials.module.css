@@ -21,17 +21,28 @@
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: 1.5rem;
     padding: 1rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar WebKit */
 }
 
 .imageCard {
+    flex: 0 0 350px;
+    height: 400px;
     position: relative;
-    width: 100%;
-    /* Google Reviews are horizontal rectangles. 16:9 fits horizontal text better */
-    aspect-ratio: 16 / 9;
+    scroll-snap-align: center;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -39,21 +50,8 @@
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.imageCard {
-    flex: 0 0 300px;
-    height: 400px;
-    /* Adjust based on image proportions */
-    position: relative;
-    scroll-snap-align: start;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    background: transparent;
-    transition: transform 0.3s ease;
-}
-
 .imageCard:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
@@ -66,21 +64,19 @@
     padding: 0.5rem;
 }
 
-@media (max-width: 1024px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .section {
         padding: 4rem 1rem;
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         padding: 0;
+    }
+
+    .imageCard {
+        flex: 0 0 85vw;
+        height: 350px;
     }
 
     .header h2 {
@@ -89,13 +85,5 @@
 
     .header p {
         font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr;
-        max-width: 380px;
-        margin: 0 auto;
     }
 }

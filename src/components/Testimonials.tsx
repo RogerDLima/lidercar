@@ -3,11 +3,14 @@ import Image from "next/image";
 import RevealWrapper from "./RevealWrapper";
 
 export default function Testimonials() {
-    // We manually map the array of existing files to avoid 404s
     const reviews = [
         "/images/client/Feedbacks_reais/depoimento_1.webp",
+        "/images/client/Feedbacks_reais/depoimento_2.webp",
         "/images/client/Feedbacks_reais/depoimento_3.webp",
         "/images/client/Feedbacks_reais/depoimento_4.webp",
+        "/images/client/Feedbacks_reais/depoimento_5.webp",
+        "/images/client/Feedbacks_reais/depoimento_6.webp",
+        "/images/client/Feedbacks_reais/depoimento_7.webp",
         "/images/client/Feedbacks_reais/depoimento_8.webp"
     ];
 
