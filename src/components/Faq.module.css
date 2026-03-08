@@ -42,7 +42,7 @@
     border-color: rgba(255, 255, 255, 0.15);
 }
 
-.detailsGroup[open] {
+.detailsGroup.open {
     border-color: rgba(0, 68, 204, 0.5);
     background: rgba(0, 68, 204, 0.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--accent-primary);
@@ -58,6 +58,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    user-select: none;
     /* removes default arrow in some browsers */
 }
 
@@ -68,11 +69,29 @@
 
 .icon {
     color: var(--accent-primary);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    flex-shrink: 0;
 }
 
-.detailsGroup[open] .icon {
+.detailsGroup.open .icon {
     transform: rotate(180deg);
+}
+
+/* 
+  Using CSS Grid to animate height from 0 to auto smoothly 
+*/
+.answerWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.detailsGroup.open .answerWrapper {
+    grid-template-rows: 1fr;
+}
+
+.answerInner {
+    overflow: hidden;
 }
 
 .answer {
@@ -81,21 +100,13 @@
     line-height: 1.7;
     font-size: 1.05rem;
     border-top: 1px solid transparent;
-    /* prevents jump */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    transform: translateY(-10px);
 }
 
-.detailsGroup[open] .answer {
-    animation: slideDown 0.3s ease-out forwards;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.detailsGroup.open .answer {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s 0.2s ease, transform 0.4s 0.1s ease;
 }

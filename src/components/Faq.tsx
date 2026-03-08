@@ -1,8 +1,21 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./Faq.module.css";
 import { ChevronDown } from "lucide-react";
 import RevealWrapper from "./RevealWrapper";
 
 export default function Faq() {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const toggleFaq = (index: number) => {
+        if (openIndex === index) {
+            setOpenIndex(null);
+        } else {
+            setOpenIndex(index);
+        }
+    };
+
     const faqs = [
         {
             q: "Vocês atendem carros importados?",
@@ -47,19 +60,27 @@ export default function Faq() {
                 </RevealWrapper>
 
                 <div className={styles.faqList}>
-                    {faqs.map((faq, i) => (
-                        <RevealWrapper key={i} delay={i * 100}>
-                            <details className={styles.detailsGroup} name="faq">
-                                <summary className={styles.summary}>
-                                    {faq.q}
-                                    <ChevronDown className={styles.icon} />
-                                </summary>
-                                <div className={styles.answer}>
-                                    <p>{faq.a}</p>
+                    {faqs.map((faq, i) => {
+                        const isOpen = openIndex === i;
+                        return (
+                            <RevealWrapper key={i} delay={i * 50}>
+                                <div className={`${styles.detailsGroup} ${isOpen ? styles.open : ''}`}>
+                                    <div
+                                        className={styles.summary}
+                                        onClick={() => toggleFaq(i)}
+                                    >
+                                        {faq.q}
+                                        <ChevronDown className={styles.icon} />
+                                    </div>
+                                    <div className={styles.answerWrapper}>
+                                        <div className={styles.answerInner}>
+                                            <p className={styles.answer}>{faq.a}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </details>
-                        </RevealWrapper>
-                    ))}
+                            </RevealWrapper>
+                        );
+                    })}
                 </div>
             </div>
         </section>
