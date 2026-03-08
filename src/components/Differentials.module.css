@@ -27,10 +27,12 @@
 
 .card {
     background: var(--bg-tertiary);
-    background-image: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
     padding: 2.5rem 2rem;
-    border-radius: 24px;
+    border-radius: 16px;
     border: 1px solid var(--glass-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    /* Top accent to give a 3D bevel */
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     position: relative;
     overflow: hidden;
@@ -40,8 +42,9 @@
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(0, 68, 204, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(25, 25, 25, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .card:nth-child(1) {
@@ -77,9 +80,19 @@
 }
 
 .icon {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.card:hover .icon {
+    opacity: 1;
+    transform: scale(1.1);
     color: var(--accent-primary);
-    margin-bottom: 1.5rem;
-    display: inline-block;
 }
 
 /* Ensure text is completely readable */
