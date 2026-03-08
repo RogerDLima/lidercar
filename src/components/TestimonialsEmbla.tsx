@@ -4,118 +4,149 @@ import React, { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import styles from './TestimonialsEmbla.module.css';
 
+const testimonials = [
+    {
+        name: "Carlos Mendes",
+        role: "Empresário",
+        quote: "O nível de atenção aos detalhes e o cuidado no transporte da minha 911 GT3 foi impressionante. Equipe pontual e altamente profissional. Recomendo de olhos fechados.",
+        avatar: "/testimonials/carlos.jpg"
+    },
+    {
+        name: "Roberto Almeida",
+        role: "Colecionador",
+        quote: "A LiderCar é a única empresa em que confio para mover minha frota. O atendimento premium e o seguro completo me dão a paz de espírito que preciso.",
+        avatar: "/testimonials/roberto.jpg"
+    },
+    {
+        name: "Marina Costa",
+        role: "Diretora Comercial",
+        quote: "Serviço impecável do início ao fim. Comprei um carro em outro estado e a LiderCar cuidou de toda a logística com máxima transparência e segurança.",
+        avatar: "/testimonials/marina.jpg"
+    },
+    {
+        name: "Eduardo Silva",
+        role: "Piloto Profissional",
+        quote: "Logística automotiva de verdade! Sempre que preciso levar carros para track days, a LiderCar resolve. Eficiência e segurança sem igual.",
+        avatar: "/testimonials/eduardo.jpg"
+    },
+    {
+        name: "Fernanda Lima",
+        role: "Médica",
+        quote: "Precisei transportar meu SUV blindado de última hora e a LiderCar foi super ágil. O motorista era muito educado e o carro chegou impecável.",
+        avatar: "/testimonials/fernanda.jpg"
+    }
+];
+
 export default function TestimonialsEmbla() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center", containScroll: "trimSnaps" });
+    const [emblaRef, emblaApi] = useEmblaCarousel({
+        loop: true,
+        align: 'center',
+        skipSnaps: false,
+        containScroll: 'trimSnaps'
+    });
+
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-    const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-    const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
-    const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
 
-    const onInit = useCallback((emblaApi: any) => {
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
+
+    const scrollTo = useCallback((index: number) => {
+        if (emblaApi) emblaApi.scrollTo(index);
+    }, [emblaApi]);
+
+    const onInit = useCallback(() => {
+        if (!emblaApi) return;
         setScrollSnaps(emblaApi.scrollSnapList());
-    }, []);
+    }, [emblaApi]);
 
-    const onSelect = useCallback((emblaApi: any) => {
+    const onSelect = useCallback(() => {
+        if (!emblaApi) return;
         setSelectedIndex(emblaApi.selectedScrollSnap());
-    }, []);
+    }, [emblaApi]);
 
     useEffect(() => {
         if (!emblaApi) return;
-        onInit(emblaApi);
-        onSelect(emblaApi);
+
+        onInit();
+        onSelect();
+
         emblaApi.on('reInit', onInit);
         emblaApi.on('reInit', onSelect);
         emblaApi.on('select', onSelect);
     }, [emblaApi, onInit, onSelect]);
 
-    const reviews = [
-        {
-            name: "Marcelo A.",
-            quote: "Atendimento impecável e total transparência na negociação.",
-            image: "/images/client/Feedbacks_reais/depoimento_1.webp",
-        },
-        {
-            name: "Roberto F.",
-            quote: "Especialistas de verdade. Encontrei exatamente a configuração que eu buscava.",
-            image: "/images/client/Feedbacks_reais/depoimento_2.webp",
-        },
-        {
-            name: "Juliana S.",
-            quote: "Segurança documental e tranquilidade. A revisão que eles fazem no veículo me deu total segurança.",
-            image: "/images/client/Feedbacks_reais/depoimento_3.webp",
-        },
-        {
-            name: "Carlos T.",
-            quote: "O processo de avaliação e troca do meu usado foi rápido e muito justo.",
-            image: "/images/client/Feedbacks_reais/depoimento_4.webp",
-        },
-        {
-            name: "Thiago M.",
-            quote: "A experiência premium anunciada é real. Trouxeram o carro na minha garagem.",
-            image: "/images/client/Feedbacks_reais/depoimento_5.webp",
-        },
-        {
-            name: "Felipe C.",
-            quote: "Desde o primeiro contato via WhatsApp até a entrega, tudo 100% profissional.",
-            image: "/images/client/Feedbacks_reais/depoimento_6.webp",
-        },
-        {
-            name: "Camila R.",
-            quote: "Pós-venda maravilhoso. Resolvem qualquer dúvida rapidamente e sem burocracia.",
-            image: "/images/client/Feedbacks_reais/depoimento_7.webp",
-        },
-        {
-            name: "Rafael B.",
-            quote: "Não troco mais de agência. Os melhores carros premium do mercado, certeza.",
-            image: "/images/client/Feedbacks_reais/depoimento_8.webp",
-        }
-    ];
-
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="depoimentos">
             <div className={styles.header}>
-                <h2>Alternativa: Embla Carousel</h2>
-                <p>Mesmo conteúdo, deslize infinito horizontal.</p>
+                <h2>O que nossos clientes dizem</h2>
+                <p>A excelência medida pela satisfação de quem confia em nosso trabalho.</p>
             </div>
 
-            <div className={styles.emblaWrapper}>
-                <div className={styles.embla}>
-                    <div className={styles.embla__viewport} ref={emblaRef}>
-                        <div className={styles.embla__container}>
-                            {reviews.map((review, i) => (
-                                <div key={i} className={`${styles.embla__slide} ${i === selectedIndex ? styles.isSelected : ''}`}>
-                                    <article className={styles.card}>
-                                        <div className={styles.avatar}>
-                                            <img src={review.image} alt={review.name} />
-                                        </div>
-                                        <p className={styles.quote}>"{review.quote}"</p>
-                                        <p className={styles.cite}>- {review.name}</p>
-                                    </article>
-                                </div>
-                            ))}
-                        </div>
+            <div className={styles.embla} aria-label="Testimonials carousel">
+                <div className={styles.emblaViewport} ref={emblaRef}>
+                    <div className={styles.emblaContainer}>
+                        {testimonials.map((testimonial, index) => (
+                            <div
+                                className={`${styles.emblaSlide} ${index === selectedIndex ? styles.isSelected : ''}`}
+                                key={index}
+                            >
+                                <article className={styles.card}>
+                                    <div className={styles.avatar}>
+                                        <img
+                                            alt={testimonial.name}
+                                            src={testimonial.avatar}
+                                            onError={(e) => {
+                                                // Fallback icon if image doesn't exist
+                                                e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E";
+                                            }}
+                                        />
+                                    </div>
+                                    <p className={styles.quote}>"{testimonial.quote}"</p>
+                                    <p className={styles.cite}>- {testimonial.name}, {testimonial.role}</p>
+                                </article>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.emblaControls} aria-label="Carousel controls">
+                    <button
+                        className={styles.emblaBtn}
+                        onClick={scrollPrev}
+                        type="button"
+                        aria-label="Previous testimonial"
+                    >
+                        <span aria-hidden="true" className={`${styles.chev} ${styles.chevLeft}`}></span>
+                    </button>
+
+                    <div className={styles.emblaDots} role="tablist" aria-label="Choose testimonial">
+                        {scrollSnaps.map((_, index) => (
+                            <button
+                                key={index}
+                                type="button"
+                                className={`${styles.emblaDot} ${index === selectedIndex ? styles.emblaDotSelected : ''}`}
+                                onClick={() => scrollTo(index)}
+                                role="tab"
+                                aria-label={`Go to testimonial ${index + 1}`}
+                                aria-selected={index === selectedIndex}
+                            />
+                        ))}
                     </div>
 
-                    <div className={styles.embla__controls}>
-                        <button className={styles.embla__btn} onClick={scrollPrev}>
-                            <span className={`${styles.chev} ${styles.chev_left}`}></span>
-                        </button>
-                        <div className={styles.embla__dots}>
-                            {scrollSnaps.map((_, index) => (
-                                <button
-                                    key={index}
-                                    className={styles.embla__dot}
-                                    aria-selected={index === selectedIndex}
-                                    onClick={() => scrollTo(index)}
-                                />
-                            ))}
-                        </div>
-                        <button className={styles.embla__btn} onClick={scrollNext}>
-                            <span className={`${styles.chev} ${styles.chev_right}`}></span>
-                        </button>
-                    </div>
+                    <button
+                        className={styles.emblaBtn}
+                        onClick={scrollNext}
+                        type="button"
+                        aria-label="Next testimonial"
+                    >
+                        <span aria-hidden="true" className={`${styles.chev} ${styles.chevRight}`}></span>
+                    </button>
                 </div>
             </div>
         </section>
