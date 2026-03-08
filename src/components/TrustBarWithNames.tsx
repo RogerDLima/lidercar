@@ -19,7 +19,7 @@ export default function TrustBarWithNames() {
     return (
         <div className={styles.trustBar}>
             <div className={styles.label}>
-                Versão c/ Textos:
+                Especialistas em:
             </div>
             <div className={styles.marqueeContainer}>
                 <div className={styles.marqueeContent}>

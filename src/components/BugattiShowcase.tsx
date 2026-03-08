@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,6 +10,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function BugattiShowcase() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const wrapperRef = useRef<HTMLDivElement>(null);
+    const [scale, setScale] = useState(1);
+
+    useEffect(() => {
+        const updateScale = () => {
+            if (wrapperRef.current) {
+                // Add some safe margin for mobile screens to avoid edge touching
+                const parentWidth = wrapperRef.current.clientWidth;
+                const paddedWidth = parentWidth < 1024 ? parentWidth - 32 : parentWidth;
+                const newScale = Math.min(1, paddedWidth / 980);
+                setScale(newScale);
+                ScrollTrigger.refresh();
+            }
+        };
+
+        // Initial setup
+        updateScale();
+
+        // Listen for window resize
+        window.addEventListener('resize', updateScale);
+        return () => window.removeEventListener('resize', updateScale);
+    }, []);
 
     useGSAP(() => {
         if (!containerRef.current) return;
@@ -108,8 +130,12 @@ export default function BugattiShowcase() {
                 <p>Engenharia automotiva levada ao expoente máximo.</p>
             </div>
 
-            <div className={styles.scaleWrapper}>
-                <div className={styles.animationHolder} ref={containerRef}>
+            <div className={styles.scaleWrapper} ref={wrapperRef} style={{ height: `${scale * 400}px` }}>
+                <div
+                    className={styles.animationHolder}
+                    ref={containerRef}
+                    style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }}
+                >
                     <div className={styles.bugattiV}>
                         <div className={styles.carhold1}>
                             <div className={styles.rulerHolderBox}>
@@ -122,15 +148,7 @@ export default function BugattiShowcase() {
                             </div>
 
                             <div className={styles.veyronHoldBox}>
-                                <img className={styles.bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Bumper" />
-                                <img className={styles.frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Frame" />
-                                <img className={styles.siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Siding" />
-                                <img className={styles.fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Fender" />
-                                <img className={styles.tire1} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 1" />
-                                <img className={styles.tire2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 2" />
-                                <img className={styles.window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Window" />
-                                <img className={styles.frontBreak} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Front Break" />
-                                <img className={styles.rearBreak} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Rear Break" />
+                                <img className={styles.bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Bumper" /><img className={styles.frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Frame" /><img className={styles.siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Siding" /><img className={styles.fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Fender" /><img className={styles.tire1} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 1" /><img className={styles.tire2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 2" /><img className={styles.window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Window" /><img className={styles.frontBreak} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Front Break" /><img className={styles.rearBreak} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Rear Break" />
                             </div>
 
                             <div className={styles.stage2}>

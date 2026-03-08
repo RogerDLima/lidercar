@@ -24,6 +24,13 @@ export default function AdminPage() {
 
     const handleSave = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!pixelId.trim()) {
+            setStatus('O ID do Pixel não pode ser vazio.');
+            setTimeout(() => setStatus(''), 4000);
+            return;
+        }
+
         setStatus('Salvando...');
         await fetch('/api/pixel', {
             method: 'POST',

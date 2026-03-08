@@ -32,30 +32,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* We let JS handle the scale or we can use CSS scale based on vw */
-    transform: scale(1);
-    transform-origin: top center;
-}
-
-@media (max-width: 1024px) {
-    .scaleWrapper {
-        transform: scale(0.8);
-    }
-}
-
-@media (max-width: 768px) {
-    .scaleWrapper {
-        transform: scale(0.45);
-        height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .scaleWrapper {
-        transform: scale(0.35);
-        height: 150px;
-    }
+    align-items: flex-start;
+    overflow: hidden;
 }
 
 /* Original absolute definitions mapped */
@@ -118,7 +96,8 @@
 }
 
 .veyronHoldBox {
-    width: 978px;
+    width: 2500px;
+    /* Oversized to prevent inline floating elements from ever wrapping across 980px limit */
     height: 229px;
     position: absolute;
     top: 60px;
@@ -135,6 +114,7 @@
 .frontBreak,
 .rearBreak {
     position: relative;
+    float: left;
 }
 
 .stage2 {
@@ -145,28 +125,30 @@
 }
 
 .veyronFull {
-    position: relative;
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
 .veyronFullTire1,
 .veyronFullTire2 {
-    position: relative;
+    position: absolute;
+    top: 96px;
+    /* Derived from chassis 229px intrinsic gap offset -133px */
 }
 
 .veyronFullTire1 {
-    top: -133px;
     left: 101px;
 }
 
 .veyronFullTire2 {
     left: 476px;
-    top: -133px;
 }
 
 .rearBreak,
 .frontBreak {
     bottom: 35px;
-    z-index: -1;
+    z-index: 1;
+    /* Make sure it's not hidden behind background, but let's just make it 1 */
 }
