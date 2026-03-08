@@ -16,8 +16,8 @@ export default function BugattiShowcase() {
     useEffect(() => {
         const updateScale = () => {
             if (wrapperRef.current) {
-                // Add some safe margin for mobile screens to avoid edge touching
                 const parentWidth = wrapperRef.current.clientWidth;
+                // Padding adjustment to prevent side-scrolling or touching edges
                 const paddedWidth = parentWidth < 1024 ? parentWidth - 32 : parentWidth;
                 const newScale = Math.min(1, paddedWidth / 980);
                 setScale(newScale);
@@ -25,101 +25,115 @@ export default function BugattiShowcase() {
             }
         };
 
-        // Initial setup
         updateScale();
-
-        // Listen for window resize
         window.addEventListener('resize', updateScale);
         return () => window.removeEventListener('resize', updateScale);
     }, []);
 
     useGSAP(() => {
         if (!containerRef.current) return;
-        const rulers = gsap.utils.toArray('.' + styles.rulerBox);
-        const tl = gsap.timeline({
+
+        const rulers = gsap.utils.toArray('.' + styles.ruler_box_1);
+
+        const mainTl = gsap.timeline({
             repeat: -1,
-            repeatDelay: 4,
+            repeatDelay: 2,
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 70%", // Start when container enters viewport
+                start: "top 80%",
             }
         });
 
         // 1. Rulers Fall In
-        tl.fromTo(rulers,
+        // Total duration: 0.3 + (11 * 0.1) = 1.4s
+        mainTl.fromTo(rulers,
             { height: 0, top: 0, backgroundColor: "#000", borderColor: "red", rotation: 720, autoAlpha: 0 },
             { height: 330, backgroundColor: "transparent", transformOrigin: "bottom", borderColor: "#777", rotation: 0, autoAlpha: 0.3, ease: "back.out", stagger: 0.1, duration: 0.3 }
         );
 
         // 2. Car Parts Assemble
-        tl.add("assemble", "-=0.2");
-        tl.fromTo("." + styles.rearBreak,
+        // Inserted roughly after the first box finishes dropping (0.5s instead of original implicit start due to TimelineLite sequence behavior logic mapping)
+        mainTl.add("stage2", 0.5);
+
+        mainTl.fromTo("." + styles.veyron_rear_break,
             { opacity: 0, right: -1000 },
-            { right: 166, opacity: 1, duration: 1.2, ease: "power1.inOut" }, "assemble");
+            { right: 166, opacity: 1, duration: 1.2, ease: "power1.inOut" }, "stage2");
 
-        tl.fromTo("." + styles.frontBreak,
+        mainTl.fromTo("." + styles.veyron_front_break,
             { opacity: 0, right: -1900 },
-            { right: 678, opacity: 1, duration: 2.1, ease: "power1.inOut", delay: 1 }, "assemble");
+            { right: 678, opacity: 1, duration: 2.1, delay: 1, ease: "power1.inOut" }, "stage2");
 
-        tl.fromTo("." + styles.bumper,
+        mainTl.fromTo("." + styles.veyron_bumper,
             { opacity: 0, right: -1100, top: -9 },
-            { right: -97, top: -9, opacity: 0.7, duration: 1, ease: "power1.inOut" }, "assemble");
+            { right: -97, top: -9, opacity: 0.7, duration: 1, ease: "power1.inOut" }, "stage2");
 
-        tl.fromTo("." + styles.frame,
+        mainTl.fromTo("." + styles.veyron_frame,
             { opacity: 0, right: -1100, top: -5 },
-            { right: -76, top: -5, opacity: 0.7, duration: 2.5, ease: "power1.inOut", delay: 1 }, "assemble");
+            { right: -76, top: -5, opacity: 0.7, duration: 2.5, delay: 1, ease: "power1.inOut" }, "stage2");
 
-        tl.fromTo("." + styles.siding,
+        mainTl.fromTo("." + styles.veyron_siding,
             { opacity: 0, right: -1200, top: -135 },
-            { right: -335, top: -135, opacity: 0.7, duration: 1.2, ease: "power1.inOut" }, "assemble");
+            { right: -335, top: -135, opacity: 0.7, duration: 1.2, ease: "power1.inOut" }, "stage2");
 
-        tl.fromTo("." + styles.fender,
+        mainTl.fromTo("." + styles.veyron_fender,
             { opacity: 0, right: -1200, top: -158 },
-            { right: 274, top: -158, opacity: 0.7, duration: 1.9, ease: "back.in" }, "assemble");
+            { right: 274, top: -158, opacity: 0.7, duration: 1.9, ease: "back.in" }, "stage2");
 
-        tl.fromTo("." + styles.window,
+        mainTl.fromTo("." + styles.veyron_window,
             { opacity: 0, right: -100, top: -341 },
-            { right: 6, top: -341, opacity: 0.7, duration: 2.4, ease: "back.out" }, "assemble");
+            { right: 6, top: -341, opacity: 0.7, duration: 2.4, ease: "back.out" }, "stage2");
 
-        tl.fromTo("." + styles.rulerHorizontal2,
+        mainTl.fromTo("." + styles.ruler_horizontal_2,
             { height: 0, left: 900, backgroundColor: "#fff", rotation: 400, autoAlpha: 0 },
-            { height: 1, width: 891, bottom: 85, left: 5, transformOrigin: "top", backgroundColor: "#777", rotation: 1080, opacity: 0.2, autoAlpha: 0.4, ease: "back.out", duration: 2 }, "assemble");
+            { height: 1, width: 891, bottom: 85, left: 5, transformOrigin: "top", backgroundColor: "#777", rotation: 1080, opacity: 0.2, autoAlpha: 0.4, duration: 2, ease: "back.out" }, "stage2+=0.1");
 
-        tl.fromTo("." + styles.tire1,
+        mainTl.fromTo("." + styles.veyron_tire,
             { opacity: 0, right: -2991, top: -301 },
-            { right: -191, top: -301, opacity: 0.7, duration: 2.5, ease: "power1.inOut" }, "assemble");
+            { right: -191, top: -301, opacity: 0.7, duration: 2.5, ease: "power1.inOut" }, "stage2");
 
-        tl.fromTo("." + styles.tire2,
+        mainTl.fromTo("." + styles.veyron_tire_2,
             { opacity: 0, right: -2558, top: -301 },
-            { right: -558, top: -301, opacity: 0.7, duration: 3, ease: "back.out", delay: 0.9 }, "assemble");
+            { right: -558, top: -301, opacity: 0.7, duration: 3, delay: 0.9, ease: "back.out" }, "stage2");
 
-        // 3. Stage 2 Full Car fades in over the skeleton
-        tl.add("reveal", "+=0.5");
-        tl.fromTo("." + styles.veyronFull,
-            { opacity: 0 }, { opacity: 0.9, duration: 4 }, "reveal");
+        // 3. Reveal final car
+        // Max time for stage 2 is tire_2 ending at 3.9s.
+        const stage3 = "stage2+=3.9";
 
-        tl.fromTo("." + styles.veyronFullTire1,
-            { opacity: 0 }, { opacity: 1, duration: 0.1 }, "reveal");
+        mainTl.fromTo("." + styles.bugatti_veyron,
+            { opacity: 0 },
+            { opacity: 0.9, duration: 4 }, stage3);
 
-        tl.fromTo("." + styles.veyronFullTire2,
-            { opacity: 0 }, { opacity: 1, duration: 0.1 }, "reveal");
+        mainTl.fromTo("." + styles.bugatti_v_tire,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.1 }, stage3);
 
-        tl.to("." + styles.veyronFull, { opacity: 0.4, duration: 0.1 }, "reveal+=4.1");
+        mainTl.fromTo("." + styles.bugatti_v_tire_2,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.1 }, stage3);
 
-        // 4. Final adjustments and animations
-        tl.add("finale", "-=0.3");
-        tl.to("." + styles.veyronHoldBox, { zIndex: 77777, opacity: 1, duration: 5 }, "finale");
-        tl.to("." + styles.veyronHoldBox, { opacity: 0, duration: 1 }, "finale+=5");
+        mainTl.to("." + styles.bugatti_veyron,
+            { opacity: 0.4, duration: 0.1 }, stage3 + "+=4");
 
-        tl.fromTo("." + styles.veyronFullTire1, { rotation: 0 }, { rotation: 70, duration: 5 }, "finale");
-        tl.fromTo("." + styles.veyronFullTire2, { rotation: 0 }, { rotation: 70, duration: 5 }, "finale");
+        // 4. Finale
+        const stage4 = stage3 + "+=4.1";
 
-        tl.to("." + styles.veyronHoldBox, { left: 7, duration: 5 }, "finale");
-        tl.to("." + styles.stage2, { left: 102, duration: 5 }, "finale");
+        mainTl.to("." + styles.veyron_hold_box, { zIndex: 77777, opacity: 1, duration: 5 }, stage4);
+        mainTl.to("." + styles.veyron_hold_box, { opacity: 0, duration: 1 }, stage4 + "+=5");
 
-        tl.fromTo(rulers,
+        mainTl.fromTo("." + styles.bugatti_v_tire,
+            { rotation: 0 },
+            { rotation: 70, duration: 5 }, stage4);
+
+        mainTl.fromTo("." + styles.bugatti_v_tire_2,
+            { rotation: 0 },
+            { rotation: 70, duration: 5 }, stage4);
+
+        mainTl.to("." + styles.veyron_hold_box, { left: 7, duration: 5 }, stage4);
+        mainTl.to("." + styles.stage_2, { left: 102, duration: 5 }, stage4);
+
+        mainTl.fromTo(rulers,
             { autoAlpha: 0.3, rotation: 0 },
-            { autoAlpha: 0, rotation: 4000, duration: 3, ease: "back.out", stagger: 0.2 }, "finale");
+            { autoAlpha: 0, rotation: 4000, duration: 3, ease: "back.out", stagger: 0.2 }, stage4);
 
     }, { scope: containerRef });
 
@@ -130,34 +144,52 @@ export default function BugattiShowcase() {
                 <p>Engenharia automotiva levada ao expoente máximo.</p>
             </div>
 
-            <div className={styles.scaleWrapper} ref={wrapperRef} style={{ height: `${scale * 400}px` }}>
+            <div className={styles.scaleWrapper} ref={wrapperRef} style={{ height: `${scale * 402}px` }}>
                 <div
-                    className={styles.animationHolder}
+                    className={styles.animation_holder}
                     ref={containerRef}
-                    style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }}
+                    style={{ transform: `scale(${scale})` }}
                 >
-                    <div className={styles.bugattiV}>
-                        <div className={styles.carhold1}>
-                            <div className={styles.rulerHolderBox}>
-                                <div className={styles.rulerWrap}>
+                    <section className={styles.bugatti_v}>
+                        <section className={styles.carhold_1}>
+
+                            <section className={styles.veyron_ruler_holer_box}>
+                                <div className={styles.ruler_1_wrap}>
                                     {[...Array(12)].map((_, i) => (
-                                        <div key={i} className={styles.rulerBox}></div>
+                                        <div key={i} className={styles.ruler_box_1}></div>
                                     ))}
                                 </div>
-                                <div className={styles.rulerHorizontal2}></div>
-                            </div>
+                                <section className={styles.ruler_horizontal_2}></section>
+                            </section>
 
-                            <div className={styles.veyronHoldBox}>
-                                <img className={styles.bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Bumper" /><img className={styles.frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Frame" /><img className={styles.siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Siding" /><img className={styles.fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Fender" /><img className={styles.tire1} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 1" /><img className={styles.tire2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 2" /><img className={styles.window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Window" /><img className={styles.frontBreak} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Front Break" /><img className={styles.rearBreak} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Rear Break" />
-                            </div>
+                            <section className={styles.veyron_hold_box}>
+                                <img className={styles.veyron_bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Bumper" />
+                                {' '}
+                                <img className={styles.veyron_frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Frame" />
+                                {' '}
+                                <img className={styles.veyron_siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Siding" />
+                                {' '}
+                                <img className={styles.veyron_fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Fender" />
+                                {' '}
+                                <img className={styles.veyron_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 1" />
+                                {' '}
+                                <img className={styles.veyron_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Tire 2" />
+                                {' '}
+                                <img className={styles.veyron_window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Window" />
+                                {' '}
+                                <img className={styles.veyron_front_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Front Break" />
+                                {' '}
+                                <img className={styles.veyron_rear_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Rear Break" />
+                            </section>
 
-                            <div className={styles.stage2}>
-                                <img className={styles.veyronFull} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v.png" alt="Bugatti Full" />
-                                <img className={styles.veyronFullTire1} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 1" />
-                                <img className={styles.veyronFullTire2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 2" />
-                            </div>
-                        </div>
-                    </div>
+                            <section className={styles.stage_2}>
+                                <img className={styles.bugatti_veyron} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v.png" alt="Bugatti Full" />
+                                <img className={styles.bugatti_v_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 1" />
+                                <img className={styles.bugatti_v_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 2" />
+                            </section>
+
+                        </section>
+                    </section>
                 </div>
             </div>
         </section>

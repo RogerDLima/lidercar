@@ -1,8 +1,9 @@
 .section {
     width: 100%;
     padding: 6rem 0;
+    background: rgb(17, 17, 45);
     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/hexabump.png');
-    background-color: var(--bg-tertiary);
+    background-color: var(--bg-tertiary, #111);
     overflow: hidden;
     position: relative;
     border-top: 1px solid var(--glass-border);
@@ -33,25 +34,68 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    /* overflow handled by section above, but let's be safe */
     overflow: hidden;
 }
 
-/* Original absolute definitions mapped */
-.animationHolder {
+.animation_holder {
     width: 980px;
-    height: 400px;
-    margin: 0 auto;
+    float: left;
     position: relative;
+    transform-origin: top center;
 }
 
-.bugattiV {
+.bugatti_veyron {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.bugatti_v {
     display: block;
-    width: 980px;
+    width: 100%;
     position: relative;
+    max-width: 980px;
     margin: 0 auto;
 }
 
-.carhold1 {
+.veyron_rear_break,
+.veyron_front_break {
+    position: absolute;
+    bottom: 35px;
+}
+
+.stage_2 {
+    position: absolute;
+    left: 45px;
+    width: 816px;
+    top: 52px;
+}
+
+.bugatti_v_tire {
+    position: relative;
+    top: -133px;
+    left: 101px;
+}
+
+.bugatti_v_tire_2 {
+    position: relative;
+    left: 476px;
+    top: -133px;
+}
+
+.veyron_bumper,
+.veyron_frame,
+.veyron_siding,
+.veyron_fender,
+.veyron_tire,
+.veyron_tire_2,
+.veyron_window {
+    position: relative;
+}
+
+.carhold_1 {
+    border: 1px solid transparent;
     height: 352px;
     margin: 50px auto 0;
     position: relative;
@@ -59,24 +103,43 @@
     float: left;
 }
 
-.rulerHolderBox {
+
+.veyron_ruler_holer_box {
     width: 900px;
     height: 340px;
-    margin: 0 auto 0 auto;
+    margin: 0px auto 0 auto;
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.rulerWrap {
+.ruler_1_wrap {
     height: 370px;
     position: relative;
     width: 1000px;
     z-index: 9999;
 }
 
-.rulerBox {
+
+.ruler_horizontal_1,
+.ruler_horizontal_2 {
+    position: relative;
+}
+
+.veyron_hold_box {
+    width: 978px;
+    height: 229px;
+    position: absolute;
+    top: 60px;
+    left: -50px;
+}
+
+.veyron_hold_box img {
+    opacity: 0;
+}
+
+.ruler_box_1 {
     position: relative;
     float: left;
     width: 65px;
@@ -84,71 +147,4 @@
     margin: 4px;
     border-left: 1px dashed #488fcd;
     border-right: 1px dashed #488fcd;
-    /* Initial states for GSAP */
-    height: 0;
-    opacity: 0;
-}
-
-.rulerHorizontal2 {
-    position: relative;
-    height: 0;
-    width: 891px;
-}
-
-.veyronHoldBox {
-    width: 2500px;
-    /* Oversized to prevent inline floating elements from ever wrapping across 980px limit */
-    height: 229px;
-    position: absolute;
-    top: 60px;
-    left: -50px;
-}
-
-.bumper,
-.frame,
-.siding,
-.fender,
-.tire1,
-.tire2,
-.window,
-.frontBreak,
-.rearBreak {
-    position: relative;
-    float: left;
-}
-
-.stage2 {
-    position: absolute;
-    left: 45px;
-    width: 816px;
-    top: 52px;
-}
-
-.veyronFull {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.veyronFullTire1,
-.veyronFullTire2 {
-    position: absolute;
-    top: 96px;
-    /* Derived from chassis 229px intrinsic gap offset -133px */
-}
-
-.veyronFullTire1 {
-    left: 101px;
-}
-
-.veyronFullTire2 {
-    left: 476px;
-}
-
-.rearBreak,
-.frontBreak {
-    bottom: 35px;
-    z-index: 1;
-    /* Make sure it's not hidden behind background, but let's just make it 1 */
 }
