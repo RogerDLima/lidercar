@@ -8,7 +8,6 @@
     overflow: hidden;
     position: relative;
     z-index: 10;
-    /* ensure it sits above the hero overflow if placed tightly */
 }
 
 .label {
@@ -55,14 +54,16 @@
     background: linear-gradient(to left, var(--bg-primary), transparent);
 }
 
-.marqueeContent {
+/* Single track with two copies of content, translates -50% for seamless loop */
+.marqueeTrack {
     display: inline-flex;
     align-items: center;
-    animation: scroll 30s linear infinite;
+    animation: marqueeScroll 30s linear infinite;
+    will-change: transform;
 }
 
 /* Pause animation on hover for readability */
-.marqueeContainer:hover .marqueeContent {
+.marqueeContainer:hover .marqueeTrack {
     animation-play-state: paused;
 }
 
@@ -70,6 +71,7 @@
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
+    flex-shrink: 0;
 }
 
 .brandName {
@@ -103,14 +105,14 @@
     opacity: 0.8;
 }
 
-@keyframes scroll {
+@keyframes marqueeScroll {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        /* Move left by exactly one-third to loop seamlessly since we duplicated 3 times */
-        transform: translateX(-33.3333%);
+        /* Move left by exactly half (one full set of brands) for seamless loop */
+        transform: translateX(-50%);
     }
 }
 

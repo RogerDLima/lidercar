@@ -1,43 +1,25 @@
 .flicker {
-    animation: flickerLight 3s linear infinite;
+    animation: shimmerGlow 4s ease-in-out infinite;
     display: inline-block;
-    /* Optional: override color if it needs to be explicitly the neon color */
     color: var(--accent-primary);
+    position: relative;
 }
 
-@keyframes flickerLight {
+@keyframes shimmerGlow {
 
     0%,
-    19.9%,
-    22%,
-    62.9%,
-    64%,
-    64.9%,
-    70%,
     100% {
-        opacity: 0.99;
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
         text-shadow:
-            -2px -2px 0 rgba(255, 255, 255, 0.6),
-            2px -2px 0 rgba(255, 255, 255, 0.6),
-            -2px 2px 0 rgba(255, 255, 255, 0.6),
-            2px 2px 0 rgba(255, 255, 255, 0.6),
-            0 -2px 8px var(--accent-primary),
-            0 0 2px var(--accent-primary),
-            0 0 5px #0088ff,
-            0 0 15px rgba(255, 255, 255, 1),
-            0 0 2px var(--accent-primary),
-            0 2px 3px #000;
+            0 0 4px rgba(0, 68, 204, 0.3),
+            0 0 8px rgba(0, 68, 204, 0.15);
+        filter: brightness(1);
     }
 
-    20%,
-    21.9%,
-    63%,
-    63.9%,
-    65%,
-    69.9% {
-        opacity: 0.5;
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-        text-shadow: none;
+    50% {
+        text-shadow:
+            0 0 8px rgba(0, 68, 204, 0.6),
+            0 0 20px rgba(0, 68, 204, 0.3),
+            0 0 40px rgba(0, 100, 255, 0.15);
+        filter: brightness(1.2);
     }
 }

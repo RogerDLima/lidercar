@@ -34,13 +34,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* overflow handled by section above, but let's be safe */
-    overflow: hidden;
+    /* Must be visible so car parts can fly from off-screen.
+       The parent .section has overflow:hidden to prevent page leak. */
+    overflow: visible;
 }
 
 .animation_holder {
     width: 980px;
-    float: left;
     position: relative;
     transform-origin: top center;
 }
@@ -100,7 +100,6 @@
     margin: 50px auto 0;
     position: relative;
     width: 980px;
-    float: left;
 }
 
 

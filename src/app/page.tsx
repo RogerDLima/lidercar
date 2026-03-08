@@ -10,7 +10,6 @@ const About = dynamic(() => import('@/components/About'));
 const Services = dynamic(() => import('@/components/Services'));
 const Differentials = dynamic(() => import('@/components/Differentials'));
 const BugattiShowcase = dynamic(() => import('@/components/BugattiShowcase'));
-const TestimonialsGrid = dynamic(() => import('@/components/TestimonialsGrid'));
 const Testimonials = dynamic(() => import('@/components/Testimonials'));
 const TestimonialsEmbla = dynamic(() => import('@/components/TestimonialsEmbla'));
 const Faq = dynamic(() => import('@/components/Faq'));
@@ -24,17 +23,13 @@ export default function Home() {
       <Header />
       <Hero />
       <TrustBar />
-      <div style={{ padding: '2rem 0', textAlign: 'center', background: '#111' }}><span style={{ color: '#fff', fontSize: '0.8rem', background: '#333', padding: '0.2rem 1rem', borderRadius: '1rem' }}>Opção 2 de Marcas (Com textos)</span></div>
       <TrustBarWithNames />
       <Stats />
       <BugattiShowcase />
       <About />
       <Services />
       <Differentials />
-      <TestimonialsGrid />
-      <div style={{ padding: '2rem 0', textAlign: 'center', background: '#111' }}><span style={{ color: '#fff', fontSize: '0.8rem', background: '#333', padding: '0.2rem 1rem', borderRadius: '1rem' }}>Opção 2 de Depoimentos (Abaixo)</span></div>
       <Testimonials />
-      <div style={{ padding: '2rem 0', textAlign: 'center', background: '#111' }}><span style={{ color: '#fff', fontSize: '0.8rem', background: '#333', padding: '0.2rem 1rem', borderRadius: '1rem' }}>Opção 3 de Depoimentos (Carrossel Embla Abaixo)</span></div>
       <TestimonialsEmbla />
       <Faq />
       <ScrollRevealStatement primaryText="EXPERIÊNCIA PREMIUM" hoverText="FALE COM UM CONSULTOR" href="https://wa.me/5511999999999?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20gr%C3%A1tis%20na%20LiderCar!" />

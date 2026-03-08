@@ -1,0 +1,58 @@
+[
+  {
+    "nome": "Teste Automatizado",
+    "email": "teste@lidercar.com.br",
+    "telefone": "(11) 91234-5678",
+    "veiculo": "BMW 320i 2023",
+    "mensagem": "Teste de formulário automatizado via Playwright.",
+    "criadoEm": "2026-03-08T18:35:12.183Z"
+  },
+  {
+    "nome": "Teste Automatizado",
+    "email": "teste@lidercar.com.br",
+    "telefone": "(11) 91234-5678",
+    "veiculo": "BMW 320i 2023",
+    "mensagem": "Teste de formulário automatizado via Playwright.",
+    "criadoEm": "2026-03-08T18:36:02.962Z"
+  },
+  {
+    "nome": "Teste Automatizado",
+    "email": "teste@lidercar.com.br",
+    "telefone": "(11) 91234-5678",
+    "veiculo": "BMW 320i 2023",
+    "mensagem": "Teste de formulário automatizado via Playwright.",
+    "criadoEm": "2026-03-08T18:38:10.266Z"
+  },
+  {
+    "nome": "Teste Automatizado",
+    "email": "teste@lidercar.com.br",
+    "telefone": "(11) 91234-5678",
+    "veiculo": "BMW 320i 2023",
+    "mensagem": "Teste de formulário automatizado via Playwright.",
+    "criadoEm": "2026-03-08T18:38:59.014Z"
+  },
+  {
+    "nome": "Teste Automatizado",
+    "email": "teste@lidercar.com.br",
+    "telefone": "(11) 91234-5678",
+    "veiculo": "BMW 320i 2023",
+    "mensagem": "Teste de formulário automatizado via Playwright.",
+    "criadoEm": "2026-03-08T18:40:51.681Z"
+  },
+  {
+    "nome": "Teste Automatizado",
+    "email": "teste@lidercar.com.br",
+    "telefone": "(11) 91234-5678",
+    "veiculo": "BMW 320i 2023",
+    "mensagem": "Teste de formulário automatizado via Playwright.",
+    "criadoEm": "2026-03-08T18:41:20.205Z"
+  },
+  {
+    "nome": "Teste Visual",
+    "email": "teste@test.com",
+    "telefone": "11999999999",
+    "veiculo": "BMW 320i",
+    "mensagem": "Teste visual",
+    "criadoEm": "2026-03-08T18:47:20.626Z"
+  }
+]

@@ -13,20 +13,24 @@ export default function TrustBar() {
         { name: "Ford", logo: "https://cdn.simpleicons.org/ford/white" }
     ];
 
-    // Duplicate the array to create a seamless infinite scroll effect
-    const duplicatedBrands = [...brands, ...brands, ...brands];
-
     return (
         <div className={styles.trustBar}>
             <div className={styles.label}>
                 Especialistas em:
             </div>
             <div className={styles.marqueeContainer}>
-                <div className={styles.marqueeContent}>
-                    {duplicatedBrands.map((brand, index) => (
+                {/* Two identical tracks for seamless infinite loop */}
+                <div className={styles.marqueeTrack}>
+                    {brands.map((brand, index) => (
                         <div key={index} className={styles.brandWrapper}>
                             <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} />
                             {/* Dot separator */}
+                            <span className={styles.separator}>•</span>
+                        </div>
+                    ))}
+                    {brands.map((brand, index) => (
+                        <div key={`dup-${index}`} className={styles.brandWrapper}>
+                            <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} />
                             <span className={styles.separator}>•</span>
                         </div>
                     ))}

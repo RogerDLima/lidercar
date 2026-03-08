@@ -9,31 +9,31 @@ const testimonials = [
         name: "Carlos Mendes",
         role: "Empresário",
         quote: "O nível de atenção aos detalhes e o cuidado no transporte da minha 911 GT3 foi impressionante. Equipe pontual e altamente profissional. Recomendo de olhos fechados.",
-        avatar: "/testimonials/carlos.jpg"
+        avatar: "/images/client/Feedbacks_reais/depoimento_6.webp"
     },
     {
         name: "Roberto Almeida",
         role: "Colecionador",
         quote: "A LiderCar é a única empresa em que confio para mover minha frota. O atendimento premium e o seguro completo me dão a paz de espírito que preciso.",
-        avatar: "/testimonials/roberto.jpg"
+        avatar: "/images/client/Feedbacks_reais/depoimento_7.webp"
     },
     {
         name: "Marina Costa",
         role: "Diretora Comercial",
         quote: "Serviço impecável do início ao fim. Comprei um carro em outro estado e a LiderCar cuidou de toda a logística com máxima transparência e segurança.",
-        avatar: "/testimonials/marina.jpg"
+        avatar: "/images/client/Feedbacks_reais/depoimento_8.webp"
     },
     {
         name: "Eduardo Silva",
         role: "Piloto Profissional",
         quote: "Logística automotiva de verdade! Sempre que preciso levar carros para track days, a LiderCar resolve. Eficiência e segurança sem igual.",
-        avatar: "/testimonials/eduardo.jpg"
+        avatar: "/images/client/Feedbacks_reais/depoimento_1.webp"
     },
     {
         name: "Fernanda Lima",
         role: "Médica",
         quote: "Precisei transportar meu SUV blindado de última hora e a LiderCar foi super ágil. O motorista era muito educado e o carro chegou impecável.",
-        avatar: "/testimonials/fernanda.jpg"
+        avatar: "/images/client/Feedbacks_reais/depoimento_2.webp"
     }
 ];
 
