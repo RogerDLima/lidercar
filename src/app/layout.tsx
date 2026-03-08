@@ -104,8 +104,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
