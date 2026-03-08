@@ -15,6 +15,8 @@ export default function BugattiShowcase() {
         if (!containerRef.current) return;
         const rulers = gsap.utils.toArray('.' + styles.rulerBox);
         const tl = gsap.timeline({
+            repeat: -1,
+            repeatDelay: 4,
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top 70%", // Start when container enters viewport

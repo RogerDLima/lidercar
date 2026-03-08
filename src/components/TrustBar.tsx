@@ -5,7 +5,7 @@ export default function TrustBar() {
     const brands = [
         { name: "BMW", logo: "https://cdn.simpleicons.org/bmw/white" },
         { name: "Audi", logo: "https://cdn.simpleicons.org/audi/white" },
-        { name: "Mercedes-Benz", logo: "https://cdn.simpleicons.org/mercedesbenz/white" },
+        { name: "Mercedes-Benz", logo: "https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" },
         { name: "Porsche", logo: "https://cdn.simpleicons.org/porsche/white" },
         { name: "Volvo", logo: "https://cdn.simpleicons.org/volvo/white" },
         { name: "Toyota", logo: "https://cdn.simpleicons.org/toyota/white" },

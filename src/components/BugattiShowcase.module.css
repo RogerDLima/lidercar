@@ -126,9 +126,16 @@
     left: -50px;
 }
 
-.veyronHoldBox img {
-    opacity: 0;
-    position: absolute;
+.bumper,
+.frame,
+.siding,
+.fender,
+.tire1,
+.tire2,
+.window,
+.frontBreak,
+.rearBreak {
+    position: relative;
 }
 
 .stage2 {
@@ -138,8 +145,15 @@
     top: 52px;
 }
 
-.stage2 img {
-    position: absolute;
+.veyronFull {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.veyronFullTire1,
+.veyronFullTire2 {
+    position: relative;
 }
 
 .veyronFullTire1 {

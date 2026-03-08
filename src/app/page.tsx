@@ -8,6 +8,8 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
 import Testimonials from "@/components/Testimonials";
+import TestimonialsGrid from "@/components/TestimonialsGrid";
+import TestimonialsEmbla from "@/components/TestimonialsEmbla";
 import Faq from "@/components/Faq";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
@@ -23,7 +25,9 @@ export default function Home() {
       <About />
       <Services />
       <Differentials />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <TestimonialsGrid />
+      <TestimonialsEmbla />
       <Faq />
       <ScrollRevealStatement primaryText="EXPERIÊNCIA PREMIUM" hoverText="FALE COM UM CONSULTOR" href="https://wa.me/5511999999999?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20gr%C3%A1tis%20na%20LiderCar!" />
       <WhatsAppButton />
