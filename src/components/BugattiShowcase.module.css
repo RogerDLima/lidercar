@@ -168,4 +168,5 @@
 .rearBreak,
 .frontBreak {
     bottom: 35px;
+    z-index: -1;
 }
