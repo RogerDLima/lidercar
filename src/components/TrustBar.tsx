@@ -1,10 +1,16 @@
 import styles from "./TrustBar.module.css";
 
 export default function TrustBar() {
-    // Array of premium brands to showcase expertise
+    // Array of premium brands to showcase expertise with generic standard img tags to avoid next.config.js restrictions
     const brands = [
-        "BMW", "Audi", "Mercedes-Benz", "Porsche",
-        "Land Rover", "Volvo", "Jeep", "Toyota", "Honda"
+        { name: "BMW", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" },
+        { name: "Audi", logo: "https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg" },
+        { name: "Mercedes-Benz", logo: "https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" },
+        { name: "Porsche", logo: "https://upload.wikimedia.org/wikipedia/en/2/23/Porsche_crest.svg" },
+        { name: "Volvo", logo: "https://upload.wikimedia.org/wikipedia/commons/0/07/Volvo_logo.svg" },
+        { name: "Toyota", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg" },
+        { name: "Honda", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg" },
+        { name: "Jeep", logo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Jeep_logo.svg" }
     ];
 
     // Duplicate the array to create a seamless infinite scroll effect
@@ -19,7 +25,8 @@ export default function TrustBar() {
                 <div className={styles.marqueeContent}>
                     {duplicatedBrands.map((brand, index) => (
                         <div key={index} className={styles.brandWrapper}>
-                            <span className={styles.brandName}>{brand}</span>
+                            <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} />
+                            <span className={styles.brandName}>{brand.name}</span>
                             {/* Dot separator */}
                             <span className={styles.separator}>•</span>
                         </div>

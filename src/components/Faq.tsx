@@ -19,6 +19,22 @@ export default function Faq() {
         {
             q: "Fazem parcelamento dos serviços?",
             a: "Sim, pensando no seu conforto, dividimos os orçamentos em até 10x sem juros no cartão de crédito nas revisões completas."
+        },
+        {
+            q: "Quais formas de pagamento vocês aceitam?",
+            a: "Aceitamos todos os cartões de crédito (parcelamento em até 10x dependendo do serviço), Pix, transferência bancária (TED) e dinheiro em espécie."
+        },
+        {
+            q: "A oficina oferece serviço de leva e traz?",
+            a: "Sim! Trabalhamos com serviço de leva e traz gratuito para clientes num raio de até 15km da nossa oficina para agendamentos programados."
+        },
+        {
+            q: "Quanto tempo demora uma revisão básica?",
+            a: "Uma revisão preventiva padrão (troca de óleo, filtros, alinhamento e inspeção de 40 itens) leva em média de 2 a 3 horas, podendo aguardar em nossa sala de espera premium."
+        },
+        {
+            q: "Vocês fazem manutenção em veículos fora de garantia da concessionária?",
+            a: "Com certeza. Essa é a nossa especialidade! Oferecemos qualidade de concessionária com preços mais justos, preservando a originalidade do seu carro."
         }
     ];
 

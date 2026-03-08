@@ -3,7 +3,7 @@ import Image from "next/image";
 import RevealWrapper from "./RevealWrapper";
 
 export default function Testimonials() {
-    const reviews = Array.from({ length: 8 }, (_, i) => `/images/client/Feedbacks reais/depoimento_${i + 1}.webp`);
+    const reviews = Array.from({ length: 8 }, (_, i) => `/images/client/Feedbacks_reais/depoimento_${i + 1}.webp`);
 
     return (
         <section id="depoimentos" className={styles.section}>

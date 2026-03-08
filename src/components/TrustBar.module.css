@@ -84,6 +84,19 @@
     color: var(--text-primary);
 }
 
+.brandImage {
+    height: 24px;
+    width: auto;
+    margin-right: 0.75rem;
+    filter: brightness(0) invert(1) opacity(0.5);
+    /* makes it light gray/transparent */
+    transition: filter 0.3s ease;
+}
+
+.brandWrapper:hover .brandImage {
+    filter: brightness(0) invert(1) opacity(1);
+}
+
 .separator {
     color: var(--accent-primary);
     margin-left: 3rem;

@@ -80,9 +80,6 @@
     color: var(--accent-primary);
     margin-bottom: 1.5rem;
     display: inline-block;
-    padding: 12px;
-    background: rgba(0, 68, 204, 0.1);
-    border-radius: 12px;
 }
 
 /* Ensure text is completely readable */

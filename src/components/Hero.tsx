@@ -28,7 +28,7 @@ export default function Hero() {
                         A excelência em mecânica que você confia. Especialistas em manter o seu veículo sempre em alta performance, com transparência e qualidade premium.
                     </p>
                     <div className={`animate-fade-in delay-200 ${styles.actions}`}>
-                        <a href="#contato" className="btn btn-primary">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento%20grátis%20na%20LiderCar!" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                             Fazer Orçamento Grátis
                         </a>
                         <a href="#servicos" className="btn btn-outline">
