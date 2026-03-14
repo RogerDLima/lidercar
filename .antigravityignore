@@ -1,0 +1,10 @@
+# Ignorar dependências e builds
+node_modules/
+dist/
+build/
+.git/
+
+# Ignorar arquivos de dados pesados
+*.log
+*.csv
+*.json
