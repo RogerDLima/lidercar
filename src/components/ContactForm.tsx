@@ -75,7 +75,7 @@ export default function ContactForm() {
 
                         <div className={styles.inputGroup}>
                             <label htmlFor="phone">Telefone / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" className={styles.input} placeholder="(11) 99999-9999" required />
+                            <input type="tel" id="phone" name="phone" className={styles.input} placeholder="(31) 9858-3809" required />
                         </div>
 
                         <div className={styles.inputGroup}>

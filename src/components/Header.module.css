@@ -33,12 +33,13 @@
 }
 
 .logoSubtitle {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-family: var(--font-titles);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    color: #fff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.12));
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
     white-space: nowrap;
 }
 

@@ -26,14 +26,21 @@
   --section-padding-mobile: 3rem;
   /* explicit mobile section padding */
   --container-width: 1200px;
+
+  /* New Font Variables */
+  --font-titles: "League Spartan", sans-serif;
+  --font-text: "Poppins", sans-serif;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 

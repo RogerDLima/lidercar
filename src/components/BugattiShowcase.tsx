@@ -139,10 +139,7 @@ export default function BugattiShowcase() {
 
     return (
         <section className={styles.section} id="engenharia">
-            <div className={styles.header}>
-                <h2>Processo de Montagem</h2>
-                <p>Engenharia automotiva levada ao expoente máximo.</p>
-            </div>
+
 
             <div className={styles.scaleWrapper} ref={wrapperRef} style={{ height: `${scale * 402}px` }}>
                 <div

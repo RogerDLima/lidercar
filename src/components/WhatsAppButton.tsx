@@ -2,8 +2,8 @@ import styles from "./WhatsAppButton.module.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppButton() {
-    const phoneNumber = "5511999999999"; // Example number
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da LiderCar.");
+    const phoneNumber = "553198583809";
+    const message = encodeURIComponent("Olá! Vi o site da LiderCar e gostaria de falar com um especialista.");
     const wpUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (

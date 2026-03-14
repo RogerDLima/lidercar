@@ -23,7 +23,7 @@ export default function Footer() {
                                 height={54}
                                 style={{ objectFit: 'contain' }}
                             />
-                            <span className={styles.logoSubtitle}>Centro Automotivo</span>
+
                         </Link>
                         <p className={styles.description}>
                             O mais alto padrão em mecânica premium. Nosso compromisso é entregar excelência, tecnologia e transparência para prolongar a vida útil do seu veículo.
@@ -69,7 +69,7 @@ export default function Footer() {
                     {/* Contact Column */}
                     <div className={styles.linksBlock}>
                         <h3>Atendimento</h3>
-                        <p className={styles.contactItem}><Phone size={16} className={styles.contactIcon} /> <span>(11) 99999-9999</span></p>
+                        <p className={styles.contactItem}><Phone size={16} className={styles.contactIcon} /> <span>(31) 9858-3809</span></p>
                         <p className={styles.contactItem}><Mail size={16} className={styles.contactIcon} /> <span>contato@lidercar.com.br</span></p>
                         <p className={styles.contactItem}><MapPin size={16} className={styles.contactIcon} /> <span>Av. Principal, 1000<br />São Paulo, SP</span></p>
 
@@ -101,52 +101,12 @@ export default function Footer() {
                     </div>
 
                     {/* Newsletter & Map Column */}
-                    <div className={styles.linksBlock}>
-                        <h3>Newsletter</h3>
-                        <p className={styles.newsletterDesc}>Receba novidades, promoções e dicas de manutenção premium.</p>
-                        <form className={styles.newsletterForm} onSubmit={(e) => e.preventDefault()}>
-                            <input
-                                type="email"
-                                placeholder="Seu melhor e-mail"
-                                className={styles.newsletterInput}
-                                aria-label="Email para newsletter"
-                            />
-                            <button type="submit" className={styles.newsletterBtn} aria-label="Inscrever na newsletter">
-                                <ArrowRight size={18} />
-                            </button>
-                        </form>
 
-                        <h3 className={styles.mapTitle}>Localização</h3>
-                        <div className={styles.mapContainer}>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975874036887!2d-46.65587832390651!3d-23.564893163001026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa805%3A0xd5f4fd8c69758d85!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1694000000000!5m2!1spt-BR!2sbr"
-                                width="100%"
-                                height="160"
-                                style={{ border: 0, borderRadius: '8px', filter: 'grayscale(1) contrast(1.1) brightness(0.6)' }}
-                                allowFullScreen={false}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Localização LiderCar"
-                            />
-                        </div>
-                    </div>
                 </div>
             </div>
 
             {/* WhatsApp CTA Banner */}
-            <div className={styles.ctaBanner}>
-                <div className={`container ${styles.ctaContainer}`}>
-                    <p>Precisa de atendimento urgente?</p>
-                    <a
-                        href="https://wa.me/5511999999999?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20na%20LiderCar!"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.ctaBtn}
-                    >
-                        💬 Fale pelo WhatsApp
-                    </a>
-                </div>
-            </div>
+
 
             <div className={styles.bottomBar}>
                 <div className={`container ${styles.bottomContainer}`}>

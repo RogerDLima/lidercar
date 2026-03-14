@@ -44,9 +44,11 @@
 }
 
 .logoSubtitle {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-family: var(--font-titles);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-size: 1.75rem;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.85);
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
@@ -226,10 +228,12 @@
 
 /* Newsletter */
 .newsletterDesc {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    letter-spacing: -0.02em;
 }
 
 .newsletterForm {

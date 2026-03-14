@@ -9,6 +9,16 @@
     background-color: var(--bg-primary);
 }
 
+.heroTitle {
+    font-family: var(--font-titles);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
 .bgWrapper {
     position: absolute;
     inset: 0;

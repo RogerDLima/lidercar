@@ -35,7 +35,7 @@ export default function Hero() {
                         A excelência em mecânica que você confia. Especialistas em manter o seu veículo sempre em alta performance, com transparência e qualidade premium.
                     </p>
                     <div className={`animate-fade-in delay-200 ${styles.actions}`}>
-                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento%20grátis%20na%20LiderCar!" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                        <a href="https://wa.me/553198583809?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento%20grátis%20na%20LiderCar!" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                             Fazer Orçamento Grátis
                         </a>
                         <a href="#servicos" className="btn btn-outline">
@@ -43,14 +43,7 @@ export default function Hero() {
                         </a>
                     </div>
 
-                    <div className={`animate-fade-in delay-300 ${styles.socialProof}`}>
-                        <div className={styles.stars}>
-                            {[...Array(5)].map((_, i) => (
-                                <Star key={i} size={16} fill="#FFD700" color="#FFD700" />
-                            ))}
-                        </div>
-                        <span><strong>4.9/5</strong> baseado em +800 avaliações no Google</span>
-                    </div>
+
                 </div>
 
                 {/* Decorative elements to give a tech/premium feel */}

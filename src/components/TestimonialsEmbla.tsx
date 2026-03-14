@@ -6,34 +6,22 @@ import styles from './TestimonialsEmbla.module.css';
 
 const testimonials = [
     {
-        name: "Carlos Mendes",
-        role: "Empresário",
-        quote: "O nível de atenção aos detalhes e o cuidado no transporte da minha 911 GT3 foi impressionante. Equipe pontual e altamente profissional. Recomendo de olhos fechados.",
+        name: "Reinaldo Junio",
+        role: "Cliente Verificado",
+        quote: "Muito bom, bem atendido, ambiente tranquilo, profissionais tom de trabalho, gostei muito do serviço prestado.",
         avatar: "/images/client/Feedbacks_reais/depoimento_6.webp"
     },
     {
-        name: "Roberto Almeida",
-        role: "Colecionador",
-        quote: "A LiderCar é a única empresa em que confio para mover minha frota. O atendimento premium e o seguro completo me dão a paz de espírito que preciso.",
+        name: "Tiago Fontes",
+        role: "Cliente Verificado",
+        quote: "Equipe top, serviço sensacional, super indico.",
         avatar: "/images/client/Feedbacks_reais/depoimento_7.webp"
     },
     {
-        name: "Marina Costa",
-        role: "Diretora Comercial",
-        quote: "Serviço impecável do início ao fim. Comprei um carro em outro estado e a LiderCar cuidou de toda a logística com máxima transparência e segurança.",
+        name: "Alberto Oliveira",
+        role: "Cliente Verificado",
+        quote: "Muito boa, muito gentil as pessoas, gostei muito.",
         avatar: "/images/client/Feedbacks_reais/depoimento_8.webp"
-    },
-    {
-        name: "Eduardo Silva",
-        role: "Piloto Profissional",
-        quote: "Logística automotiva de verdade! Sempre que preciso levar carros para track days, a LiderCar resolve. Eficiência e segurança sem igual.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_1.webp"
-    },
-    {
-        name: "Fernanda Lima",
-        role: "Médica",
-        quote: "Precisei transportar meu SUV blindado de última hora e a LiderCar foi super ágil. O motorista era muito educado e o carro chegou impecável.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_2.webp"
     }
 ];
 

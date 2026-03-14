@@ -6,46 +6,46 @@ import styles from './TestimonialsGrid.module.css';
 export default function TestimonialsGrid() {
     const reviews = [
         {
-            name: "Marcelo A.",
-            role: "Cliente Verificado",
-            title: "Atendimento impecável e total transparência na negociação.",
-            text: "O processo de avaliação e escolha do meu carro foi excelente. Estava receoso de trocar meu esportivo, mas a equipe de especialistas passou muita confiança e entregaram exatamente o combinado.",
+            name: "Marcella Nunes",
+            role: "Cliente Verificada",
+            title: "Sensacional! Equipe nota 10.",
+            text: "Desde a Elaine na recepção aos meninos da mecânica! Sempre explicam tudo o que vão fazer no carro e passam muita confiança, além do serviço ser sempre de qualidade! Outro ponto forte é a rapidez. Indico muito!",
             image: "/images/client/Feedbacks_reais/depoimento_1.webp",
             divClass: styles.div1,
             darkText: false
         },
         {
-            name: "Roberto F.",
+            name: "Thiago Matheus",
             role: "Cliente Verificado",
-            title: "Especialistas de verdade.",
-            text: "Encontrei exatamente a configuração que eu buscava. Um atendimento premium, sem a burocracia das concessionárias tradicionais.",
+            title: "Excelente trabalho da equipe.",
+            text: "Profissionais capacitados e atenciosos. Preço justo e correto! Parabéns ao time da empresa por todo empenho e as prestações de serviços.",
             image: "/images/client/Feedbacks_reais/depoimento_2.webp",
             divClass: styles.div2,
             darkText: false
         },
         {
-            name: "Juliana S.",
+            name: "Marcelo Fernando",
             role: "Cliente Verificado",
-            title: "Segurança documental e tranquilidade.",
-            text: "Comprei um XC90 blindado para a família. A revisão minuciosa que eles fazem no veículo antes da entrega me deram total tranquilidade. Recomendo de olhos fechados pela integridade documental e vistorias rigorosas que realizam.",
+            title: "Excelente serviço feito com qualidade.",
+            text: "Resolvido o problema, obrigado. Sucesso e prosperidade, abraços.",
             image: "/images/client/Feedbacks_reais/depoimento_3.webp",
             divClass: styles.div3,
             darkText: true
         },
         {
-            name: "Carlos T.",
+            name: "Rodrigo Silva",
             role: "Cliente Verificado",
-            title: "Avaliação justa no meu usado.",
-            text: "O processo de troca e avaliação do meu antigo veículo foi rápido, transparente e com um retorno bem acima do mercado tradicional.",
+            title: "Os cara e profissional mesmo.",
+            text: "Serviço de qualidade... Confiança e transparência... Equipe está de parabéns...",
             image: "/images/client/Feedbacks_reais/depoimento_4.webp",
             divClass: styles.div4,
             darkText: true
         },
         {
-            name: "Thiago M.",
+            name: "Fernando Aislan",
             role: "Cliente Verificado",
-            title: "A experiência premium anunciada é real e a entrega em domicílio facilita demais a vida.",
-            text: "O consultor me atendeu com exclusividade pelo WhatsApp, esclareceu todas as dúvidas sobre o híbrido e ainda entregaram o carro diretamente na garagem da minha casa no mesmo dia em que o pagamento compensou.",
+            title: "Qualidade de atendimento nota 10.",
+            text: "Muito ágeis para resposta via whatsapp, serviço rápido e preço justo. Excelente.",
             image: "/images/client/Feedbacks_reais/depoimento_5.webp",
             divClass: styles.div5,
             darkText: false

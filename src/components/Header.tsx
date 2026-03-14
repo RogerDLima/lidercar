@@ -28,7 +28,7 @@ export default function Header() {
                         style={{ objectFit: 'contain', filter: 'drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.15)) drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.3))' }}
                         priority
                     />
-                    <span className={styles.logoSubtitle}>Centro Automotivo</span>
+
                 </Link>
                 <nav className={styles.navLinks}>
                     <Link href="#servicos" className={styles.link}>

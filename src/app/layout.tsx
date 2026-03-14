@@ -75,7 +75,7 @@ export default function RootLayout({
     "image": "https://lidercar.vercel.app/images/client/logo.webp",
     "@id": "https://lidercar.vercel.app",
     "url": "https://lidercar.vercel.app",
-    "telephone": "+55DD999999999", // Adjust later to the client's actual phone
+    "telephone": "+553198583809",
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
