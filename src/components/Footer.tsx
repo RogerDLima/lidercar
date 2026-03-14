@@ -16,14 +16,16 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className={styles.brandInfo}>
                         <Link href="/" className={styles.logo}>
-                            <Image
-                                src="/images/client/logo.webp"
-                                alt="LiderCar Logo"
-                                width={200}
-                                height={54}
-                                style={{ objectFit: 'contain' }}
-                            />
-
+                            <div className={styles.logoText}>
+                                <Image
+                                    src="/images/client/logo.webp"
+                                    alt="LiderCar Logo"
+                                    width={200}
+                                    height={54}
+                                    style={{ objectFit: 'contain' }}
+                                />
+                                <span className={styles.logoSubtitle}>Centro Automotivo</span>
+                            </div>
                         </Link>
                         <p className={styles.description}>
                             O mais alto padrão em mecânica premium. Nosso compromisso é entregar excelência, tecnologia e transparência para prolongar a vida útil do seu veículo.

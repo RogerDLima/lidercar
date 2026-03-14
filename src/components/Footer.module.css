@@ -19,10 +19,12 @@
     padding: 4rem 0 3rem;
 }
 
-.container {
+.footerContent {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.3fr 1.4fr;
-    gap: 3rem;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: flex-start;
 }
 
 .brandInfo {

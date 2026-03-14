@@ -34,8 +34,8 @@
 .glassBadge {
     position: absolute;
     bottom: 2rem;
-    right: -2rem;
-    /* offset outside image for design */
+    right: 1rem;
+    /* moved inward to prevent clipping */
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .glassBadge strong {

@@ -32,15 +32,23 @@
     text-decoration: none;
 }
 
+.logoText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .logoSubtitle {
-    font-family: var(--font-titles);
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: -0.01em;
-    color: #fff;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.12));
+    font-family: var(--font-text);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: -5px;
+    margin-left: 2px;
+    text-shadow: 0 0 10px rgba(0, 68, 204, 0.8), 0 0 20px rgba(0, 68, 204, 0.4);
+    filter: brightness(1.2);
 }
 
 

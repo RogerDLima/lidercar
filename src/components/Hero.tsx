@@ -22,7 +22,7 @@ export default function Hero() {
 
             <div className={`container ${styles.content}`}>
                 <div className={styles.textContent}>
-                    <h1 className="animate-fade-in">
+                    <h1 className={`${styles.heroTitle} animate-fade-in`}>
                         Somos apaixonados em servir, <br />
                         <FlickeringText
                             text="seu carro."

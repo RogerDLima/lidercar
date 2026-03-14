@@ -10,7 +10,7 @@ const About = dynamic(() => import('@/components/About'));
 const Services = dynamic(() => import('@/components/Services'));
 const Differentials = dynamic(() => import('@/components/Differentials'));
 const BugattiShowcase = dynamic(() => import('@/components/BugattiShowcase'));
-const Testimonials = dynamic(() => import('@/components/Testimonials'));
+const TestimonialsGrid = dynamic(() => import('@/components/TestimonialsGrid'));
 const TestimonialsEmbla = dynamic(() => import('@/components/TestimonialsEmbla'));
 const Faq = dynamic(() => import('@/components/Faq'));
 const ScrollRevealStatement = dynamic(() => import('@/components/ScrollRevealStatement'));
@@ -29,7 +29,7 @@ export default function Home() {
       <About />
       <Services />
       <Differentials />
-      <Testimonials />
+      <TestimonialsGrid />
       <TestimonialsEmbla />
       <Faq />
       <ScrollRevealStatement primaryText="EXPERIÊNCIA PREMIUM" hoverText="FALE COM UM CONSULTOR" href="https://wa.me/5511999999999?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20gr%C3%A1tis%20na%20LiderCar!" />

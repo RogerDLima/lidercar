@@ -20,14 +20,17 @@ export default function Header() {
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.nav}`}>
                 <Link href="/" className={styles.logo}>
-                    <Image
-                        src="/images/client/logo.webp"
-                        alt="LiderCar Logo"
-                        width={180}
-                        height={48}
-                        style={{ objectFit: 'contain', filter: 'drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.15)) drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.3))' }}
-                        priority
-                    />
+                    <div className={styles.logoText}>
+                        <Image
+                            src="/images/client/logo.webp"
+                            alt="LiderCar Logo"
+                            width={180}
+                            height={48}
+                            style={{ objectFit: 'contain' }}
+                            priority
+                        />
+                        <span className={styles.logoSubtitle}>Centro Automotivo</span>
+                    </div>
 
                 </Link>
                 <nav className={styles.navLinks}>
