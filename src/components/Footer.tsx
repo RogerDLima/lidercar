@@ -114,9 +114,9 @@ export default function Footer() {
                 <div className={`container ${styles.bottomContainer}`}>
                     <p>&copy; {new Date().getFullYear()} LiderCar. Todos os direitos reservados.</p>
                     <div className={styles.legalLinks}>
-                        <Link href="#">Política de Privacidade</Link>
+                        <Link href="/privacidade">Política de Privacidade</Link>
                         <span className={styles.separator}>|</span>
-                        <Link href="#">Termos de Serviço</Link>
+                        <Link href="/termos">Termos de Serviço</Link>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ export default function Hero() {
                         Somos apaixonados em servir, <br />
                         <FlickeringText
                             text="seu carro."
-                            flickerIndexes={[4, 5]}
+                            flickerIndexes={[4, 5, 6, 7, 8]}
                             className={styles.highlight}
                             as="span"
                         />

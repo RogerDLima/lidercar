@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-const TrustBarWithNames = dynamic(() => import('@/components/TrustBarWithNames'));
+
 import Stats from "@/components/Stats";
 
 // Lazy Loaded Sections
@@ -23,7 +23,7 @@ export default function Home() {
       <Header />
       <Hero />
       <TrustBar />
-      <TrustBarWithNames />
+      <TrustBar />
       <Stats />
       <BugattiShowcase />
       <About />
