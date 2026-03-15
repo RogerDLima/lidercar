@@ -3,10 +3,12 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [pathname, setPathname] = React.useState("");
 
@@ -20,6 +22,9 @@ export default function Header() {
     }, []);
 
     const isInternalPage = pathname !== "/" && pathname !== "";
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
         <header className={`${styles.header} ${scrolled || isInternalPage ? styles.scrolled : ''}`}>
@@ -37,14 +42,18 @@ export default function Header() {
                     </div>
 
                 </Link>
-                <nav className={styles.navLinks}>
-                    <Link href="#servicos" className={styles.link}>
+                <button className={styles.mobileMenuBtn} onClick={toggleMenu} aria-label="Menu">
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+
+                <nav className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
+                    <Link href="#servicos" className={styles.link} onClick={closeMenu}>
                         Serviços
                     </Link>
-                    <Link href="#sobre" className={styles.link}>
+                    <Link href="#sobre" className={styles.link} onClick={closeMenu}>
                         Sobre a Oficina
                     </Link>
-                    <Link href="/contato" className="btn btn-primary">
+                    <Link href="/contato" className="btn btn-primary" onClick={closeMenu}>
                         Agendar Revisão
                     </Link>
                 </nav>

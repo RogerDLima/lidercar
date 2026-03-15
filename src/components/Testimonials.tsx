@@ -4,14 +4,46 @@ import RevealWrapper from "./RevealWrapper";
 
 export default function Testimonials() {
     const reviews = [
-        "/images/client/Feedbacks_reais/depoimento_1.webp",
-        "/images/client/Feedbacks_reais/depoimento_2.webp",
-        "/images/client/Feedbacks_reais/depoimento_3.webp",
-        "/images/client/Feedbacks_reais/depoimento_4.webp",
-        "/images/client/Feedbacks_reais/depoimento_5.webp",
-        "/images/client/Feedbacks_reais/depoimento_6.webp",
-        "/images/client/Feedbacks_reais/depoimento_7.webp",
-        "/images/client/Feedbacks_reais/depoimento_8.webp"
+        {
+            id: 1,
+            name: "Carlos Eduardo",
+            image: "https://ui-avatars.com/api/?name=Carlos+Eduardo&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 2,
+            name: "Mariana Costa",
+            image: "https://ui-avatars.com/api/?name=Mariana+Costa&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 3,
+            name: "Ricardo Silva",
+            image: "https://ui-avatars.com/api/?name=Ricardo+Silva&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 4,
+            name: "Fernanda Lima",
+            image: "https://ui-avatars.com/api/?name=Fernanda+Lima&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 5,
+            name: "João Pedro",
+            image: "https://ui-avatars.com/api/?name=Joao+Pedro&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 6,
+            name: "Amanda Oliveira",
+            image: "https://ui-avatars.com/api/?name=Amanda+Oliveira&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 7,
+            name: "Lucas Souza",
+            image: "https://ui-avatars.com/api/?name=Lucas+Souza&background=0044cc&color=fff&size=128"
+        },
+        {
+            id: 8,
+            name: "Beatriz Santos",
+            image: "https://ui-avatars.com/api/?name=Beatriz+Santos&background=0044cc&color=fff&size=128"
+        }
     ];
 
     return (

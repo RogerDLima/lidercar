@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <Hero />
       <TrustBar />
-      <TrustBar />
+      <TrustBarWithNames />
       <Stats />
       <BugattiShowcase />
       <About />

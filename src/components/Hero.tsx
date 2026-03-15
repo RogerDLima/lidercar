@@ -10,7 +10,7 @@ export default function Hero() {
             <div className={styles.bgWrapper}>
                 <Image
                     src="/images/client/hero_bg.webp"
-                    alt="Oficina LiderCar Premium"
+                    alt="Interior da LiderCar - Oficina Mecânica Premium Especializada"
                     fill
                     priority
                     sizes="100vw"

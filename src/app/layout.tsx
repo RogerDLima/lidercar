@@ -84,9 +84,9 @@ export default function RootLayout({
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Local Business Address",
-      "addressLocality": "Cidade",
-      "addressRegion": "Estado",
+      "streetAddress": "Av. Principal, 1000",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
       "addressCountry": "BR"
     },
     "openingHoursSpecification": [
@@ -113,6 +113,10 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://google.com" />
+        <link rel="preconnect" href="https://s3-us-west-2.amazonaws.com" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
         <script
           type="application/ld+json"
