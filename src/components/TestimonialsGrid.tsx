@@ -10,7 +10,7 @@ export default function TestimonialsGrid() {
             role: "Cliente Verificada",
             title: "Sensacional! Equipe nota 10.",
             text: "Desde a Elaine na recepção aos meninos da mecânica! Sempre explicam tudo o que vão fazer no carro e passam muita confiança, além do serviço ser sempre de qualidade! Outro ponto forte é a rapidez. Indico muito!",
-            image: "/images/client/Feedbacks_reais/depoimento_1.webp",
+            image: "https://ui-avatars.com/api/?name=Marcella+Nunes&background=0044cc&color=fff&size=128",
             divClass: styles.div1,
             darkText: false
         },
@@ -19,28 +19,36 @@ export default function TestimonialsGrid() {
             role: "Cliente Verificado",
             title: "Excelente trabalho da equipe.",
             text: "Profissionais capacitados e atenciosos. Preço justo e correto! Parabéns ao time da empresa por todo empenho e as prestações de serviços.",
-            image: "/images/client/Feedbacks_reais/depoimento_2.webp",
+            image: "https://ui-avatars.com/api/?name=Thiago+Matheus&background=0044cc&color=fff&size=128",
             divClass: styles.div2,
             darkText: false
         },
         {
             name: "Marcelo Fernando",
             role: "Cliente Verificado",
-            title: "Excelente serviço feito com qualidade.",
-            content: "O melhor atendimento que já tive! Profissionalismo e cuidado técnico impecável com meu carro.",
-            image: "https://ui-avatars.com/api/?name=Marcella+Nunes&background=0044cc&color=fff&size=128"
+            title: "Diagnóstico Preciso e Ágil",
+            text: "O melhor atendimento que já tive! Profissionalismo e cuidado técnico impecável com meu carro.",
+            image: "https://ui-avatars.com/api/?name=Marcelo+Fernando&background=0044cc&color=fff&size=128",
+            divClass: styles.div3,
+            darkText: true
         },
         {
             name: "Ricardo Santos",
             role: "Colecionador",
-            content: "Confio meus carros clássicos apenas à LiderCar. A equipe entende de mecânica de alta performance como ninguém.",
-            image: "https://ui-avatars.com/api/?name=Ricardo+Santos&background=0044cc&color=fff&size=128"
+            title: "Confiança Total",
+            text: "Confio meus carros clássicos apenas à LiderCar. A equipe entende de mecânica de alta performance como ninguém.",
+            image: "https://ui-avatars.com/api/?name=Ricardo+Santos&background=0044cc&color=fff&size=128",
+            divClass: styles.div4,
+            darkText: true
         },
         {
             name: "Mariana Costa",
             role: "Cliente Premium",
-            content: "A agilidade e a transparência no diagnóstico me surpreenderam. Recomendo para quem busca segurança e qualidade.",
-            image: "https://ui-avatars.com/api/?name=Mariana+Costa&background=0044cc&color=fff&size=128"
+            title: "Atendimento Diferenciado",
+            text: "A agilidade e a transparência no diagnóstico me surpreenderam. Recomendo para quem busca segurança e qualidade.",
+            image: "https://ui-avatars.com/api/?name=Mariana+Costa&background=0a0a0a&color=fff&size=128",
+            divClass: styles.div5,
+            darkText: false
         }
     ];
 
