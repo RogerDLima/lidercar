@@ -16,6 +16,16 @@
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .services {
+        padding: 4rem 1.5rem;
+    }
+
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
 .header h2 {
     margin-bottom: 1rem;
     color: var(--text-primary);
