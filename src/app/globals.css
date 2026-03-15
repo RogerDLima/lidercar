@@ -44,6 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  /* Prevents iOS pull-to-refresh that caused unwanted page reloads on mobile */
+  overscroll-behavior-y: none;
 }
 
 body::after {
