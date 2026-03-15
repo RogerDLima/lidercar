@@ -76,7 +76,7 @@ export default function RootLayout({
     "@id": "https://lidercar.vercel.app",
     "url": "https://lidercar.vercel.app",
     "telephone": "+553198583809",
-    "priceRange": "$$",
+    "priceRange": "$$$",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -84,9 +84,10 @@ export default function RootLayout({
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Av. Principal, 1000",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
+      "streetAddress": "Av. José Cândido da Silveira, 3365",
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "postalCode": "31930-029",
       "addressCountry": "BR"
     },
     "openingHoursSpecification": [
