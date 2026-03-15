@@ -15,8 +15,8 @@ export default function TermsOfService() {
                 <Breadcrumbs items={breadcrumbItems} />
             </div>
 
-            {/* Container narrower for better reading legibility, text-left for professional legal look */}
-            <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 relative z-10 text-left">
+            {/* Container narrower for better reading legibility, text-center for professional legal look */}
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 relative z-10 text-center">
 
                 {/* Header is centered */}
                 <div className="text-center mb-16">
@@ -29,7 +29,7 @@ export default function TermsOfService() {
                     </p>
                 </div>
 
-                <div className="space-y-12 text-gray-300 text-sm md:text-base leading-relaxed tracking-wide" style={{ textAlign: 'justify' }}>
+                <div className="space-y-12 text-gray-300 text-sm md:text-base leading-relaxed tracking-wide text-center">
 
                     <section>
                         <h2 className="font-semibold text-white mb-4 text-xl md:text-2xl" style={{ fontSize: '1.5rem' }}>1. Escopo dos Serviços e Diagnóstico Estrutural</h2>
