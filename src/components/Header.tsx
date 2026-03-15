@@ -29,7 +29,7 @@ export default function Header() {
     return (
         <header className={`${styles.header} ${scrolled || isInternalPage ? styles.scrolled : ''}`}>
             <div className={`container ${styles.nav}`}>
-                <Link href="/" className={styles.logo}>
+                <Link href="/" className={styles.logo} aria-label="Ir para a Página Inicial da LiderCar">
                     <div className={styles.logoText}>
                         <Image
                             src="/images/client/logo.webp"
