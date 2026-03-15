@@ -8,7 +8,10 @@ import { useState, useEffect } from 'react';
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
 
+    const [pathname, setPathname] = React.useState("");
+
     useEffect(() => {
+        setPathname(window.location.pathname);
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
@@ -16,8 +19,10 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const isInternalPage = pathname !== "/" && pathname !== "";
+
     return (
-        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+        <header className={`${styles.header} ${scrolled || isInternalPage ? styles.scrolled : ''}`}>
             <div className={`container ${styles.nav}`}>
                 <Link href="/" className={styles.logo}>
                     <div className={styles.logoText}>
@@ -29,7 +34,6 @@ export default function Header() {
                             style={{ objectFit: 'contain' }}
                             priority
                         />
-                        <span className={styles.logoSubtitle}>Centro Automotivo</span>
                     </div>
 
                 </Link>

@@ -8,6 +8,7 @@ import Stats from "@/components/Stats";
 // Lazy Loaded Sections
 const About = dynamic(() => import('@/components/About'));
 const Services = dynamic(() => import('@/components/Services'));
+const TrustBarWithNames = dynamic(() => import('@/components/TrustBarWithNames'));
 const Differentials = dynamic(() => import('@/components/Differentials'));
 const BugattiShowcase = dynamic(() => import('@/components/BugattiShowcase'));
 const TestimonialsGrid = dynamic(() => import('@/components/TestimonialsGrid'));

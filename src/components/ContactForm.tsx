@@ -80,7 +80,7 @@ export default function ContactForm() {
 
                         <div className={styles.inputGroup}>
                             <label htmlFor="vehicle">Veículo (Marca/Modelo/Ano)</label>
-                            <input type="text" id="vehicle" name="vehicle" className={styles.input} placeholder="Ex: Porsche 911 Carrera 2021" />
+                            <input type="text" id="vehicle" name="vehicle" className={styles.input} placeholder="Ex: Toyota Corolla 2020" />
                         </div>
 
                         <div className={styles.inputGroup}>

@@ -23,12 +23,12 @@ export default function Testimonials() {
                 </RevealWrapper>
 
                 <div className={styles.gallery}>
-                    {reviews.map((src, index) => (
-                        <RevealWrapper key={index} delay={index * 50}>
+                    {reviews.map((review, index) => (
+                        <RevealWrapper key={review.id} delay={index * 50}>
                             <div className={styles.imageCard}>
                                 <Image
-                                    src={src}
-                                    alt={`Depoimento ${index + 1}`}
+                                    src={review.image}
+                                    alt={`Depoimento de ${review.name}`}
                                     fill
                                     style={{ objectFit: 'cover' }}
                                     sizes="(max-width: 768px) 80vw, (max-width: 1200px) 33vw, 25vw"

@@ -27,28 +27,20 @@ export default function TestimonialsGrid() {
             name: "Marcelo Fernando",
             role: "Cliente Verificado",
             title: "Excelente serviço feito com qualidade.",
-            text: "Resolvido o problema, obrigado. Sucesso e prosperidade, abraços.",
-            image: "/images/client/Feedbacks_reais/depoimento_3.webp",
-            divClass: styles.div3,
-            darkText: true
+            content: "O melhor atendimento que já tive! Profissionalismo e cuidado técnico impecável com meu carro.",
+            image: "https://ui-avatars.com/api/?name=Marcella+Nunes&background=0044cc&color=fff&size=128"
         },
         {
-            name: "Rodrigo Silva",
-            role: "Cliente Verificado",
-            title: "Os cara e profissional mesmo.",
-            text: "Serviço de qualidade... Confiança e transparência... Equipe está de parabéns...",
-            image: "/images/client/Feedbacks_reais/depoimento_4.webp",
-            divClass: styles.div4,
-            darkText: true
+            name: "Ricardo Santos",
+            role: "Colecionador",
+            content: "Confio meus carros clássicos apenas à LiderCar. A equipe entende de mecânica de alta performance como ninguém.",
+            image: "https://ui-avatars.com/api/?name=Ricardo+Santos&background=0044cc&color=fff&size=128"
         },
         {
-            name: "Fernando Aislan",
-            role: "Cliente Verificado",
-            title: "Qualidade de atendimento nota 10.",
-            text: "Muito ágeis para resposta via whatsapp, serviço rápido e preço justo. Excelente.",
-            image: "/images/client/Feedbacks_reais/depoimento_5.webp",
-            divClass: styles.div5,
-            darkText: false
+            name: "Mariana Costa",
+            role: "Cliente Premium",
+            content: "A agilidade e a transparência no diagnóstico me surpreenderam. Recomendo para quem busca segurança e qualidade.",
+            image: "https://ui-avatars.com/api/?name=Mariana+Costa&background=0044cc&color=fff&size=128"
         }
     ];
 

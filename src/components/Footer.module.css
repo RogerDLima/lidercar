@@ -25,6 +25,9 @@
     gap: 4rem;
     margin-bottom: 4rem;
     align-items: flex-start;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .brandInfo {

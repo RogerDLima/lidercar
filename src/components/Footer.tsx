@@ -24,7 +24,6 @@ export default function Footer() {
                                     height={54}
                                     style={{ objectFit: 'contain' }}
                                 />
-                                <span className={styles.logoSubtitle}>Centro Automotivo</span>
                             </div>
                         </Link>
                         <p className={styles.description}>
