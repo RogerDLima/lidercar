@@ -32,38 +32,36 @@ export default function PrivacyPolicy() {
                         </p>
                     </header>
 
-                    <div className="space-y-16 text-gray-300 leading-relaxed text-base text-justify">
-                        <section className="group">
-                            <div className="flex items-center gap-4 mb-6">
+                    <div className="space-y-16 text-gray-300 leading-relaxed text-base text-center">
+                        <section className="group flex flex-col items-center">
+                            <div className="flex flex-col items-center gap-4 mb-6">
                                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">01</span>
                                 <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Compromisso Institucional</h2>
                             </div>
-                            <div className="pl-4 md:pl-12 border-l border-white/5">
+                            <div className="md:px-12 w-full max-w-2xl">
                                 <p className="text-gray-400 leading-relaxed">
                                     A <strong className="text-white font-medium">LiderCar Centro Automotivo</strong>, estabelecida em Belo Horizonte-MG, reitera seu compromisso com a transparência total. Esta política detalha o tratamento de dados em total conformidade com a <strong className="text-white/80">Lei Geral de Proteção de Dados (Lei 13.709/2018)</strong>. Coletamos apenas o estritamente necessário para garantir a segurança operacional e a comunicação do serviço.
                                 </p>
                             </div>
                         </section>
 
-                        <section className="pt-8 group">
-                            <div className="flex items-center gap-4 mb-6">
+                        <section className="pt-8 group flex flex-col items-center">
+                            <div className="flex flex-col items-center gap-4 mb-4">
                                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">02</span>
                                 <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Coleta & Tratamento</h2>
                             </div>
-                            <div className="pl-4 md:pl-12 border-l border-white/5">
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent rounded-2xl hover:border-blue-500/30 transition-colors">
-                                        <h3 className="text-white font-bold text-xs mb-3 uppercase tracking-widest flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            <div className="md:px-12 w-full">
+                                <div className="grid md:grid-cols-2 gap-6 text-left">
+                                    <div className="p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent rounded-2xl hover:border-blue-500/30 transition-colors flex flex-col items-center text-center">
+                                        <h3 className="text-white font-bold text-xs mb-3 uppercase tracking-widest flex items-center justify-center gap-2 w-full">
                                             Dados do Proprietário
                                         </h3>
                                         <p className="text-gray-500 text-sm leading-relaxed">
                                             Nome, CPF e canais de contato (WhatsApp) para faturamento, garantias técnicas e emissão de notas fiscais.
                                         </p>
                                     </div>
-                                    <div className="p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent rounded-2xl hover:border-blue-500/30 transition-colors">
-                                        <h3 className="text-white font-bold text-xs mb-3 uppercase tracking-widest flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                    <div className="p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent rounded-2xl hover:border-blue-500/30 transition-colors flex flex-col items-center text-center">
+                                        <h3 className="text-white font-bold text-xs mb-3 uppercase tracking-widest flex items-center justify-center gap-2 w-full">
                                             Prontuário Veicular
                                         </h3>
                                         <p className="text-gray-500 text-sm leading-relaxed">
@@ -74,24 +72,23 @@ export default function PrivacyPolicy() {
                             </div>
                         </section>
 
-                        <section className="pt-8 group">
-                            <div className="flex items-center gap-4 mb-6">
+                        <section className="pt-8 group flex flex-col items-center">
+                            <div className="flex flex-col items-center gap-4 mb-6">
                                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">03</span>
                                 <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Segurança de Dados</h2>
                             </div>
-                            <div className="pl-4 md:pl-12 border-l border-white/5">
+                            <div className="md:px-12 w-full max-w-2xl">
                                 <p className="text-gray-400 mb-6 leading-relaxed">
                                     Seus dados nunca são comercializados. O acesso é restrito aos sistemas internos com medidas rigorosas de proteção:
                                 </p>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[13px]">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[13px] text-left">
                                     {[
                                         "Criptografia de ponta a ponta.",
                                         "Acesso físico restrito.",
                                         "Treinamento técnico da equipe.",
                                         "Auditoria de acessos ao sistema."
                                     ].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-3 p-4 border border-white/5 bg-white/[0.02] rounded-xl">
-                                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0" />
+                                        <div key={i} className="flex items-center justify-center gap-3 p-4 border border-white/5 bg-white/[0.02] rounded-xl text-center">
                                             <span className="text-gray-400">{item}</span>
                                         </div>
                                     ))}
@@ -99,12 +96,12 @@ export default function PrivacyPolicy() {
                             </div>
                         </section>
 
-                        <section className="mt-16 p-10 bg-gradient-to-b from-blue-900/10 to-transparent border border-blue-500/20 rounded-3xl text-center">
+                        <section className="mt-16 p-10 bg-gradient-to-b from-blue-900/10 to-transparent border border-blue-500/20 rounded-3xl text-center flex flex-col items-center">
                             <h2 className="text-xl font-bold text-white mb-2 tracking-wide uppercase">Canal Direto DPO</h2>
-                            <p className="text-gray-400 text-sm mb-8 font-light max-w-md mx-auto">
+                            <p className="text-gray-400 text-sm mb-8 font-light max-w-md">
                                 Para exercer seus direitos de acesso, portabilidade ou exclusão do seu cadastro em nossos sistemas.
                             </p>
-                            <a href="mailto:contato@lidercarbh.com.br" className="text-xs font-bold uppercase tracking-widest text-white bg-blue-600 px-8 py-4 rounded-full hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all inline-block">
+                            <a href="mailto:contato@lidercarbh.com.br" className="text-xs font-bold uppercase tracking-widest text-white bg-blue-600 px-8 py-4 rounded-full hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all inline-block w-fit">
                                 Falar com o Responsável
                             </a>
                         </section>

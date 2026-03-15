@@ -71,3 +71,28 @@
     letter-spacing: 0.05em;
     font-weight: 500;
 }
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .value {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+
+    .label {
+        font-size: 0.85rem;
+    }
+
+    .statBox {
+        padding: 1.5rem 1rem;
+    }
+}
