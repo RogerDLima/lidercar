@@ -23,7 +23,7 @@ export default function Hero() {
             <div className={`container ${styles.content}`}>
                 <div className={styles.textContent}>
                     <h1 className={`${styles.heroTitle} animate-fade-in`}>
-                        LiderCar: a sua oficina de <br />
+                        Sua oficina de <br />
                         <FlickeringText
                             text="confiança em BH!"
                             flickerIndexes={[0, 1, 2, 3, 4, 5, 6, 7, 8]}

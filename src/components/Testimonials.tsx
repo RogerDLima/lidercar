@@ -46,7 +46,7 @@ export default function Testimonials() {
             <div className={`container ${styles.container}`}>
                 <RevealWrapper className={styles.header}>
                     <h2>O que nossos clientes dizem</h2>
-                    <p>Resultados reais de quem já confia na LiderCar.</p>
+                    <p>A excelência medida pela satisfação de quem confia em nosso trabalho.</p>
                 </RevealWrapper>
 
                 <div className={styles.gallery}>
