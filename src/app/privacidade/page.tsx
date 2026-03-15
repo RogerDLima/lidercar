@@ -13,8 +13,8 @@ export default function PrivacyPolicy() {
                 <Breadcrumbs items={breadcrumbItems} />
             </div>
 
-            <article className="max-w-4xl mx-auto px-6 md:px-12 py-24 text-center">
-                <header className="mb-20">
+            <article className="max-w-4xl mx-auto px-6 md:px-12 py-24">
+                <header className="mb-24 text-center">
                     <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter text-white">
                         Política de Privacidade
                     </h1>
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
                     </p>
                 </header>
 
-                <div className="space-y-20 text-gray-300 leading-relaxed text-lg text-left">
+                <div className="space-y-24 text-gray-300 leading-relaxed text-lg">
                     <section className="group">
                         <div className="flex flex-col items-center text-center mb-8">
                             <span className="text-blue-500 font-mono text-sm mb-2 tracking-widest uppercase">01. Introdução</span>

@@ -25,18 +25,33 @@ export default function Testimonials() {
             image: "https://randomuser.me/api/portraits/men/67.jpg"
         },
         {
+            id: 4,
+            name: "Marcella Nunes",
+            role: "Executiva",
+            image: "https://randomuser.me/api/portraits/women/12.jpg"
+        },
+        {
+            id: 5,
+            name: "Felipe Mendes",
+            role: "Engenheiro",
+            image: "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        {
             id: 6,
             name: "Amanda Oliveira",
+            role: "Designer",
             image: "https://randomuser.me/api/portraits/women/15.jpg"
         },
         {
             id: 7,
             name: "Lucas Souza",
+            role: "Médico",
             image: "https://randomuser.me/api/portraits/men/22.jpg"
         },
         {
             id: 8,
             name: "Beatriz Santos",
+            role: "Advogada",
             image: "https://randomuser.me/api/portraits/women/65.jpg"
         }
     ];
