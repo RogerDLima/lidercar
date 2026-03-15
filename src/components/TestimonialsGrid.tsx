@@ -71,7 +71,7 @@ export default function TestimonialsGrid() {
                             </div>
                         </div>
                         <div className={`${styles.review} ${review.darkText ? styles.dark : ''}`}>
-                            <h4>{review.title}</h4>
+                            <h3 className="text-lg font-bold mb-2">{review.title}</h3>
                             <p>“ {review.text} ”</p>
                         </div>
                     </div>

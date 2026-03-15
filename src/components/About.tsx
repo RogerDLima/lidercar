@@ -24,7 +24,7 @@ export default function About() {
                     </div>
                 </RevealWrapper>
 
-                <RevealWrapper delay={150} className={styles.textContent}>
+                <RevealWrapper delay={150} className={`${styles.textContent} flex flex-col items-center md:items-start text-center md:text-left`}>
                     <h2>A LiderCar</h2>
                     <h3>Muito mais que uma oficina, a casa do seu carro.</h3>
                     <p>
@@ -33,21 +33,21 @@ export default function About() {
                     <p>
                         É por isso que na <strong>LiderCar</strong>, investimos pesado em tecnologia de diagnóstico de ponta e capacitação contínua da nossa equipe de engenheiros mecatrônicos e técnicos especializados. Nosso compromisso é entregar a você transparência absoluta em cada orçamento e agilidade na entrega.
                     </p>
-                    <div className={styles.features}>
-                        <div className={styles.featureItem}>
+                    <div className={`${styles.features} flex flex-col md:grid md:grid-cols-2 items-center md:items-start w-full`}>
+                        <div className={`${styles.featureItem} flex justify-center md:justify-start w-full`}>
                             <span className={styles.check}>✓</span> Transparência 100%
                         </div>
-                        <div className={styles.featureItem}>
+                        <div className={`${styles.featureItem} flex justify-center md:justify-start w-full`}>
                             <span className={styles.check}>✓</span> Peças Originais
                         </div>
-                        <div className={styles.featureItem}>
+                        <div className={`${styles.featureItem} flex justify-center md:justify-start w-full`}>
                             <span className={styles.check}>✓</span> Garantia Estendida
                         </div>
-                        <div className={styles.featureItem}>
+                        <div className={`${styles.featureItem} flex justify-center md:justify-start w-full`}>
                             <span className={styles.check}>✓</span> Equipe Especializada
                         </div>
                     </div>
-                    <a href="#contato" className="btn btn-primary" style={{ marginTop: '2rem' }}>
+                    <a href="#contato" className="btn btn-primary mt-8">
                         Falar com um Mecânico
                     </a>
                 </RevealWrapper>

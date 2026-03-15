@@ -7,7 +7,6 @@ export default function TermsOfService() {
 
     return (
         <main className="bg-[#050505] min-h-screen text-white w-full relative overflow-hidden">
-            {/* Decorative Background Elements */}
             <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-blue-900/20 to-transparent pointer-events-none"></div>
             <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none"></div>
 
@@ -17,95 +16,70 @@ export default function TermsOfService() {
                 <Breadcrumbs items={breadcrumbItems} />
             </div>
 
-            <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 py-16 relative z-10">
+            <article className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12 py-16 relative z-10">
                 <div className="bg-[#0a0a0a]/80 border border-white/5 rounded-3xl p-8 md:p-16 backdrop-blur-xl shadow-2xl">
                     <header className="mb-20 text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
-                            Termos de Serviço
+                            Termos de Serviço Automotivo
                         </h1>
                         <div className="h-1 w-20 bg-blue-600 mx-auto mb-8 rounded-full"></div>
                         <p className="text-gray-400 text-lg max-w-xl mx-auto leading-relaxed font-light">
-                            As diretrizes técnicas e contratuais que regem o padrão de excelência em serviços automotivos da LiderCar.
+                            Regras gerais da prestação de serviços mecânicos, políticas de avaliação e regulação de custódia na LiderCar.
                         </p>
                         <p className="text-blue-500/80 mt-8 font-mono text-[10px] uppercase tracking-[0.2em] border-b border-white/5 pb-8 inline-block">
-                            Código de Conduta | Última atualização: {new Date().toLocaleDateString('pt-BR')}
+                            Última revisão: Março de 2026
                         </p>
                     </header>
 
-                    <div className="space-y-16 text-gray-300 leading-relaxed text-base text-center">
-                        <section className="group flex flex-col items-center">
-                            <div className="flex flex-col items-center gap-4 mb-6">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">I</span>
-                                <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Objeto & Escopo</h2>
-                            </div>
-                            <div className="md:px-12 w-full max-w-2xl">
-                                <p className="text-gray-400">
-                                    Estes Termos regem a prestação de serviços de diagnóstico, manutenção e reparação veicular pela <strong className="text-white font-medium">LiderCar Centro Automotivo</strong>. Ao contratar nossos serviços, o cliente adere a este protocolo técnico, essencial para a validação de garantias e conformidade com normas da ABNT.
-                                </p>
-                            </div>
-                        </section>
-
-                        <section className="pt-8 group flex flex-col items-center">
-                            <div className="flex flex-col items-center gap-4 mb-4">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">II</span>
-                                <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Protocolo de Diagnóstico</h2>
-                            </div>
-                            <div className="md:px-12 w-full">
-                                <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                                    A execução de qualquer serviço está condicionada à aprovação prévia de orçamento técnico:
-                                </p>
-                                <div className="grid md:grid-cols-2 gap-6 text-left">
-                                    <div className="p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent rounded-2xl hover:border-blue-500/30 transition-colors flex flex-col items-center text-center">
-                                        <h3 className="text-white font-bold text-xs mb-3 uppercase tracking-widest flex items-center justify-center gap-2 w-full">
-                                            Validade Orçamentária
-                                        </h3>
-                                        <p className="text-gray-500 text-sm leading-relaxed">Os orçamentos possuem validade de 5 (cinco) dias, devido à flutuação de custos de componentes OEM e insumos de importação.</p>
-                                    </div>
-                                    <div className="p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent rounded-2xl hover:border-blue-500/30 transition-colors flex flex-col items-center text-center">
-                                        <h3 className="text-white font-bold text-xs mb-3 uppercase tracking-widest flex items-center justify-center gap-2 w-full">
-                                            Autorização Digital
-                                        </h3>
-                                        <p className="text-gray-500 text-sm leading-relaxed">Aceitamos aprovações via WhatsApp ou e-mail, que servem como prova contratual corporativa de aceite de escopo e valores.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section className="pt-8 group flex flex-col items-center">
-                            <div className="flex flex-col items-center gap-4 mb-6">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">III</span>
-                                <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Política de Garantia</h2>
-                            </div>
-                            <div className="md:px-12 w-full max-w-2xl">
-                                <p className="text-gray-400 mb-6">
-                                    Oferecemos 90 dias de garantia sobre a mão de obra técnica. A garantia de peças segue o prazo estabelecido por seus fabricantes (exclusivo para peças fornecidas pela oficina).
-                                </p>
-                                <div className="p-6 bg-gradient-to-b from-red-900/20 to-transparent border-t-2 border-red-500 rounded-b-xl max-w-xl mx-auto text-center">
-                                    <p className="text-red-400 text-xs uppercase tracking-widest font-bold mb-3">⚠️ Exclusão Técnica</p>
-                                    <p className="text-gray-400 text-sm leading-relaxed">
-                                        A garantia será anulada em casos de: negligência em revisões periódicas, uso do veículo em condições extremas (track days/competições), intervenção de terceiros ou instalação de acessórios que comprometam o sistema original.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section className="pt-8 group flex flex-col items-center">
-                            <div className="flex flex-col items-center gap-4 mb-6">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/10 text-blue-500 font-mono text-xs border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">IV</span>
-                                <h2 className="text-2xl font-bold text-white tracking-tight uppercase tracking-widest">Custódia Veicular</h2>
-                            </div>
-                            <div className="md:px-12 w-full max-w-2xl">
-                                <p className="text-gray-400">
-                                    Após a notificação de serviço concluído, o cliente tem 48h para retirada. Decorrido este prazo, será aplicada taxa de estadia diária para cobertura de custos logísticos e segurança de pátio.
-                                </p>
-                            </div>
-                        </section>
-
-                        <section className="pt-16 mt-16 border-t border-white/5 text-center flex justify-center">
-                            <p className="text-gray-600 text-xs font-mono tracking-widest uppercase">
-                                Foro eleito: Comarca de Belo Horizonte, MG.
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <section className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-blue-500/30 transition-all">
+                            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-mono text-sm">01</span>
+                                Orçamento e Aprovação
+                            </h2>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Nenhum serviço é iniciado sem o consentimento do cliente. A LiderCar fornecerá um orçamento detalhado contendo escopo de mão de obra e preço das peças recomendadas. O orçamento possui <strong>validade de 5 (cinco) dias corridos</strong> devido à flutuação dos valores mercadológicos das peças.
                             </p>
                         </section>
+
+                        <section className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-blue-500/30 transition-all">
+                            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-mono text-sm">02</span>
+                                Termo de Garantia Legal
+                            </h2>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                A mão de obra mecânica possui a garantia legal incondicional de <strong>90 (noventa) dias</strong> contra vícios de execução (CDC). A duração da garantia das peças aplicadas pode variar, sempre regida pelas estipulações de seus respectivos fabricantes.
+                            </p>
+                        </section>
+
+                        <section className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-blue-500/30 transition-all">
+                            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-mono text-sm">03</span>
+                                Peças Fornecidas pelo Cliente
+                            </h2>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Caso o cliente decida fornecer suas próprias peças para instalação, a garantia cobrirá <strong>exclusivamente a execução técnica da mão de obra</strong>. A oficina não arca com retrabalho, diagnóstico de ineficiência ou defeitos de fabricação em peças externas.
+                            </p>
+                        </section>
+
+                        <section className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-blue-500/30 transition-all">
+                            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-mono text-sm">04</span>
+                                Custódia e Atrasos
+                            </h2>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Após notificação de conclusão dos serviços, o cliente terá <strong>48 horas úteis</strong> para realizar a retirada do veículo. Passado este período, poderá incidir cobrança diária de estacionamento para cobrir despesas de acomodação no pátio segurado.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div className="mt-12 bg-red-900/10 border border-red-500/20 p-8 rounded-2xl">
+                        <h2 className="text-lg font-bold text-red-500 mb-4 flex items-center gap-2">
+                            ⚠️ Anulação da Garantia
+                        </h2>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Intervenções executadas sobre os serviços prestados concluídos por outros terceiros desautorizados, mau uso extremo do veículo (como participação em "track days" não previstos em projeto de fábrica) e negligência comprovada contra luzes de advertência de painel poderão anular qualquer modalidade de garantia ofertada pela LiderCar.
+                        </p>
                     </div>
                 </div>
             </article>

@@ -162,29 +162,29 @@ export default function BugattiShowcase() {
                             </section>
 
                             <section className={styles.veyron_hold_box}>
-                                <img loading="lazy" decoding="async" className={styles.veyron_bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Para-choque Bugatti Veyron - Engenharia LiderCar" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_bumper} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_bumper.png" alt="Para-choque Bugatti Veyron - Engenharia LiderCar" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Chassi e Estrutura Automotiva de Alta Performance" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_frame} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_frame.png" alt="Chassi e Estrutura Automotiva de Alta Performance" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Lateral de Veículo Superesportivo" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_siding} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_siding.png" alt="Lateral de Veículo Superesportivo" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Para-lama com Acabamento Premium" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_fender} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_s_fender.png" alt="Para-lama com Acabamento Premium" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Pneu e Roda de Alta Performance 1" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Pneu e Roda de Alta Performance 1" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Pneu e Roda de Alta Performance 2" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_tire.png" alt="Pneu e Roda de Alta Performance 2" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Vidros e Blindagem de Precisão" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_window} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_windows.png" alt="Vidros e Blindagem de Precisão" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_front_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Sistema de Freios a Disco de Alta Performance" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_front_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Sistema de Freios a Disco de Alta Performance" width="1000" height="500" />
                                 {' '}
-                                <img loading="lazy" decoding="async" className={styles.veyron_rear_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Pinças de Freio de Precisão" />
+                                <img loading="lazy" decoding="async" className={styles.veyron_rear_break} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/veyron_brake.png" alt="Pinças de Freio de Precisão" width="1000" height="500" />
                             </section>
 
                             <section className={styles.stage_2}>
-                                <img loading="lazy" decoding="async" className={styles.bugatti_veyron} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v.png" alt="Bugatti Full" />
-                                <img loading="lazy" decoding="async" className={styles.bugatti_v_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 1" />
-                                <img loading="lazy" decoding="async" className={styles.bugatti_v_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 2" />
+                                <img loading="lazy" decoding="async" className={styles.bugatti_veyron} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v.png" alt="Bugatti Full" width="1000" height="500" />
+                                <img loading="lazy" decoding="async" className={styles.bugatti_v_tire} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 1" width="1000" height="500" />
+                                <img loading="lazy" decoding="async" className={styles.bugatti_v_tire_2} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49174/bugatti_v_tire.png" alt="Tire 2" width="1000" height="500" />
                             </section>
 
                         </section>

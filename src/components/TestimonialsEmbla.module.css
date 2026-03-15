@@ -207,15 +207,18 @@
 .emblaDot {
     appearance: none;
     border: 0;
-    width: 8px;
-    height: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+    /* Touch target expansion */
     border-radius: 50%;
     background: var(--muted-2);
+    background-clip: content-box;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .emblaDotSelected {
-    background: var(--text-primary);
-    transform: scale(1.6);
+    background-color: var(--text-primary);
+    transform: scale(1.4);
 }
