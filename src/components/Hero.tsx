@@ -23,16 +23,16 @@ export default function Hero() {
             <div className={`container ${styles.content}`}>
                 <div className={styles.textContent}>
                     <h1 className={`${styles.heroTitle} animate-fade-in`}>
-                        Somos apaixonados em servir, <br />
+                        LiderCar: a sua oficina de <br />
                         <FlickeringText
-                            text="seu carro."
-                            flickerIndexes={[4, 5, 6, 7, 8]}
+                            text="confiança em BH!"
+                            flickerIndexes={[0, 1, 2, 3, 4, 5, 6, 7, 8]}
                             className={styles.highlight}
                             as="span"
                         />
                     </h1>
                     <p className={`animate-fade-in delay-100 ${styles.subtitle}`}>
-                        A excelência em mecânica que você confia. Especialistas em manter o seu veículo sempre em alta performance, com transparência e qualidade premium.
+                        Freios, suspensão, alinhamento, balanceamento e revisão completa com agilidade e qualidade técnica superior somente na LiderCar.
                     </p>
                     <div className={`animate-fade-in delay-200 ${styles.actions}`}>
                         <a href="https://wa.me/553198583809?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento%20grátis%20na%20LiderCar!" target="_blank" rel="noopener noreferrer" className="btn btn-primary">

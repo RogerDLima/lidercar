@@ -30,7 +30,7 @@ export default function Footer() {
                             O mais alto padrão em mecânica premium. Nosso compromisso é entregar excelência, tecnologia e transparência para prolongar a vida útil do seu veículo.
                         </p>
                         <div className={styles.social}>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <a href="https://www.instagram.com/lidercartrevo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <Instagram size={18} />
                             </a>
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -71,8 +71,8 @@ export default function Footer() {
                     <div className={styles.linksBlock}>
                         <h3>Atendimento</h3>
                         <p className={styles.contactItem}><Phone size={16} className={styles.contactIcon} /> <span>(31) 9858-3809</span></p>
-                        <p className={styles.contactItem}><Mail size={16} className={styles.contactIcon} /> <span>contato@lidercar.com.br</span></p>
-                        <p className={styles.contactItem}><MapPin size={16} className={styles.contactIcon} /> <span>Av. Principal, 1000<br />São Paulo, SP</span></p>
+                        <p className={styles.contactItem}><Mail size={16} className={styles.contactIcon} /> <span>contato@lidercarbh.com.br</span></p>
+                        <p className={styles.contactItem}><MapPin size={16} className={styles.contactIcon} /> <span>Av. José Cândido da Silveira, 3365<br />Ipê, Belo Horizonte - MG, 31930-029</span></p>
 
                         {/* Hours */}
                         <h3 className={styles.hoursTitle}>Horário de Funcionamento</h3>
@@ -81,7 +81,7 @@ export default function Footer() {
                                 <Clock size={16} className={styles.contactIcon} />
                                 <div>
                                     <strong>Seg - Sex:</strong>
-                                    <span>08:00 - 18:00</span>
+                                    <span>Seg - Sex: 08:00 - 18:00</span>
                                 </div>
                             </li>
                             <li>
@@ -94,7 +94,7 @@ export default function Footer() {
                             <li>
                                 <Clock size={16} className={styles.contactIcon} />
                                 <div>
-                                    <strong>Domingo / Feriados:</strong>
+                                    <strong>Domingo:</strong>
                                     <span>Fechado</span>
                                 </div>
                             </li>
