@@ -126,12 +126,12 @@
 }
 
 .designation {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 0.85rem;
 }
 
 .designation.dark {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .review h4 {
