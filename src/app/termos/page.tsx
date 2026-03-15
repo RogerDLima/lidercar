@@ -6,7 +6,7 @@ export default function TermsOfService() {
     const breadcrumbItems = [{ label: "Termos de Serviço" }];
 
     return (
-        <main className="bg-[#0a0a0a] min-h-screen text-white">
+        <main className="bg-[#0a0a0a] min-h-screen text-white w-full">
             <Header />
 
             <div style={{ paddingTop: '80px' }}>

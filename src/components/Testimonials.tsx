@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Testimonials.module.css";
 import Image from "next/image";
 import RevealWrapper from "./RevealWrapper";
@@ -6,43 +8,36 @@ export default function Testimonials() {
     const reviews = [
         {
             id: 1,
-            name: "Carlos Eduardo",
-            image: "https://ui-avatars.com/api/?name=Carlos+Eduardo&background=0044cc&color=fff&size=128"
+            name: "Marco Silva",
+            role: "Proprietário de Porsche",
+            image: "https://randomuser.me/api/portraits/men/32.jpg"
         },
         {
             id: 2,
-            name: "Mariana Costa",
-            image: "https://ui-avatars.com/api/?name=Mariana+Costa&background=0044cc&color=fff&size=128"
+            name: "Julia Santos",
+            role: "Cliente Premium",
+            image: "https://randomuser.me/api/portraits/women/44.jpg"
         },
         {
             id: 3,
-            name: "Ricardo Silva",
-            image: "https://ui-avatars.com/api/?name=Ricardo+Silva&background=0044cc&color=fff&size=128"
-        },
-        {
-            id: 4,
-            name: "Fernanda Lima",
-            image: "https://ui-avatars.com/api/?name=Fernanda+Lima&background=0044cc&color=fff&size=128"
-        },
-        {
-            id: 5,
-            name: "João Pedro",
-            image: "https://ui-avatars.com/api/?name=Joao+Pedro&background=0044cc&color=fff&size=128"
+            name: "Ricardo Oliveira",
+            role: "Colecionador",
+            image: "https://randomuser.me/api/portraits/men/67.jpg"
         },
         {
             id: 6,
             name: "Amanda Oliveira",
-            image: "https://ui-avatars.com/api/?name=Amanda+Oliveira&background=0044cc&color=fff&size=128"
+            image: "https://randomuser.me/api/portraits/women/15.jpg"
         },
         {
             id: 7,
             name: "Lucas Souza",
-            image: "https://ui-avatars.com/api/?name=Lucas+Souza&background=0044cc&color=fff&size=128"
+            image: "https://randomuser.me/api/portraits/men/22.jpg"
         },
         {
             id: 8,
             name: "Beatriz Santos",
-            image: "https://ui-avatars.com/api/?name=Beatriz+Santos&background=0044cc&color=fff&size=128"
+            image: "https://randomuser.me/api/portraits/women/65.jpg"
         }
     ];
 

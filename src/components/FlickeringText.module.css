@@ -1,25 +1,51 @@
 .flicker {
-    animation: shimmerGlow 4s ease-in-out infinite;
     display: inline-block;
     color: var(--accent-primary);
-    position: relative;
+    animation: flicker 3s linear infinite;
+    text-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.4),
+        1px -1px 0 rgba(255, 255, 255, 0.4),
+        -1px 1px 0 rgba(255, 255, 255, 0.4),
+        1px 1px 0 rgba(255, 255, 255, 0.4),
+        0 -2px 8px,
+        0 0 2px,
+        0 0 5px var(--accent-primary),
+        0 0 15px var(--accent-hover),
+        0 0 2px var(--accent-primary),
+        0 2px 3px #000;
 }
 
-@keyframes shimmerGlow {
+@keyframes flicker {
 
     0%,
+    19.9%,
+    22%,
+    62.9%,
+    64%,
+    64.9%,
+    70%,
     100% {
+        opacity: 0.99;
         text-shadow:
-            0 0 4px rgba(0, 68, 204, 0.3),
-            0 0 8px rgba(0, 68, 204, 0.15);
-        filter: brightness(1);
+            -1px -1px 0 rgba(255, 255, 255, 0.4),
+            1px -1px 0 rgba(255, 255, 255, 0.4),
+            -1px 1px 0 rgba(255, 255, 255, 0.4),
+            1px 1px 0 rgba(255, 255, 255, 0.4),
+            0 -2px 8px,
+            0 0 2px,
+            0 0 5px var(--accent-primary),
+            0 0 15px var(--accent-hover),
+            0 0 2px var(--accent-primary),
+            0 2px 3px #000;
     }
 
-    50% {
-        text-shadow:
-            0 0 8px rgba(0, 68, 204, 0.6),
-            0 0 20px rgba(0, 68, 204, 0.3),
-            0 0 40px rgba(0, 100, 255, 0.15);
-        filter: brightness(1.2);
+    20%,
+    21.9%,
+    63%,
+    63.9%,
+    65%,
+    69.9% {
+        opacity: 0.4;
+        text-shadow: none;
     }
 }

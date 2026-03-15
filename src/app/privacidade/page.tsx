@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
     const breadcrumbItems = [{ label: "Política de Privacidade" }];
 
     return (
-        <main className="bg-[#0a0a0a] min-h-screen text-white">
+        <main className="bg-[#0a0a0a] min-h-screen text-white w-full">
             <Header />
 
             <div style={{ paddingTop: '80px' }}>

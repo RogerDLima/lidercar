@@ -12,7 +12,7 @@ export default function Footer() {
             <div className={styles.gradientLine} />
 
             <div className={styles.footerTop}>
-                <div className={`container ${styles.container}`}>
+                <div className={styles.footerContent}>
                     {/* Brand Column */}
                     <div className={styles.brandInfo}>
                         <Link href="/" className={styles.logo}>
