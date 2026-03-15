@@ -9,37 +9,37 @@ const testimonials = [
         name: "Reinaldo Junio",
         role: "Cliente Verificado",
         quote: "Muito bom, bem atendido, ambiente tranquilo, profissionais tom de trabalho, gostei muito do serviço prestado.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_6.webp"
+        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
         name: "Tiago Fontes",
         role: "Cliente Verificado",
         quote: "Equipe top, serviço sensacional, super indico.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_7.webp"
+        avatar: "https://randomuser.me/api/portraits/men/67.jpg"
     },
     {
         name: "Alberto Oliveira",
         role: "Cliente Verificado",
         quote: "Muito boa, muito gentil as pessoas, gostei muito.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_8.webp"
+        avatar: "https://randomuser.me/api/portraits/men/22.jpg"
     },
     {
         name: "Daniel Silva",
         role: "Cliente Verificado",
         quote: "Serviço de primeira qualidade, recomendo a todos que buscam transparência.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_3.webp"
+        avatar: "https://randomuser.me/api/portraits/men/45.jpg"
     },
     {
         name: "Juliana Mendes",
         role: "Cliente Verificado",
         quote: "Atendimento excepcional e preço justo. Meu carro ficou ótimo.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_4.webp"
+        avatar: "https://randomuser.me/api/portraits/women/44.jpg"
     },
     {
         name: "Marcos Paulo",
         role: "Cliente Verificado",
         quote: "Equipe técnica muito competente. Explicaram tudo com clareza.",
-        avatar: "/images/client/Feedbacks_reais/depoimento_5.webp"
+        avatar: "https://randomuser.me/api/portraits/men/12.jpg"
     }
 ];
 

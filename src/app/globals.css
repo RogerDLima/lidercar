@@ -228,7 +228,16 @@ p {
 
 .reveal-element.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
+}
+
+/* Side reveal variants */
+.reveal-left {
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  transform: translateX(50px);
 }
 
 /* Custom Scrollbar */

@@ -47,10 +47,10 @@ export default function Header() {
                 </button>
 
                 <nav className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-                    <Link href="#servicos" className={styles.link} onClick={closeMenu}>
+                    <Link href="/#servicos" className={styles.link} onClick={closeMenu}>
                         Serviços
                     </Link>
-                    <Link href="#sobre" className={styles.link} onClick={closeMenu}>
+                    <Link href="/#sobre" className={styles.link} onClick={closeMenu}>
                         Sobre a Oficina
                     </Link>
                     <Link href="/contato" className="btn btn-primary" onClick={closeMenu}>

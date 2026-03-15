@@ -21,15 +21,19 @@ export default function Differentials() {
                 </RevealWrapper>
 
                 <div className={styles.grid}>
-                    {diffs.map((diff, index) => (
-                        <RevealWrapper key={index} delay={index * 100}>
-                            <div className={styles.card}>
-                                <div className={styles.icon}>{diff.icon}</div>
-                                <h3>{diff.title}</h3>
-                                <p>{diff.text}</p>
-                            </div>
-                        </RevealWrapper>
-                    ))}
+                    {diffs.map((diff, index) => {
+                        // Alternate slide-in from left and right
+                        const revealClass = index % 2 === 0 ? "reveal-left" : "reveal-right";
+                        return (
+                            <RevealWrapper key={index} delay={index * 100} className={revealClass}>
+                                <div className={styles.card}>
+                                    <div className={styles.icon}>{diff.icon}</div>
+                                    <h3>{diff.title}</h3>
+                                    <p>{diff.text}</p>
+                                </div>
+                            </RevealWrapper>
+                        );
+                    })}
                 </div>
             </div>
         </section>

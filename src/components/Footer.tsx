@@ -60,9 +60,9 @@ export default function Footer() {
                         <h3>Institucional</h3>
                         <nav>
                             <Link href="/"><ChevronRight size={14} className={styles.navIcon} /> Início</Link>
-                            <Link href="#sobre"><ChevronRight size={14} className={styles.navIcon} /> Nossa História</Link>
-                            <Link href="#servicos"><ChevronRight size={14} className={styles.navIcon} /> Serviços Restauração</Link>
-                            <Link href="#depoimentos"><ChevronRight size={14} className={styles.navIcon} /> Depoimentos</Link>
+                            <Link href="/#sobre"><ChevronRight size={14} className={styles.navIcon} /> Nossa História</Link>
+                            <Link href="/#servicos"><ChevronRight size={14} className={styles.navIcon} /> Serviços Restauração</Link>
+                            <Link href="/#depoimentos"><ChevronRight size={14} className={styles.navIcon} /> Depoimentos</Link>
                             <Link href="/contato"><ChevronRight size={14} className={styles.navIcon} /> Contato</Link>
                         </nav>
                     </div>
