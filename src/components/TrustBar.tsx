@@ -24,7 +24,7 @@ export default function TrustBar() {
                     {brands.map((brand, index) => (
                         <div key={index} className={styles.brandWrapper}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} width="120" height="40" />
+                            <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} />
                             {/* Dot separator */}
                             <span className={styles.separator}>•</span>
                         </div>
@@ -32,7 +32,7 @@ export default function TrustBar() {
                     {brands.map((brand, index) => (
                         <div key={`dup-${index}`} className={styles.brandWrapper}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} width="120" height="40" />
+                            <img src={brand.logo} alt={`Logo ${brand.name}`} className={styles.brandImage} />
                             <span className={styles.separator}>•</span>
                         </div>
                     ))}
