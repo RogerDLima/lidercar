@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
                 <Breadcrumbs items={breadcrumbItems} />
             </div>
 
-            <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 relative z-10 text-center">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 relative z-10">
 
                 <div className="text-center mb-16">
                     <h1 className="font-bold mb-6 tracking-tight text-white" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
                     </p>
                 </div>
 
-                <div className="space-y-12 text-gray-300 text-sm md:text-base leading-relaxed tracking-wide text-center">
+                <div className="space-y-12 text-gray-300 text-sm md:text-base leading-relaxed tracking-wide text-left">
 
                     <section>
                         <h2 className="font-semibold text-white mb-4 text-xl md:text-2xl" style={{ fontSize: '1.5rem' }}>1. Premissas Formais e Respeito Constante à LGPD</h2>

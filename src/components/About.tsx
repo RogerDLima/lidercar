@@ -47,7 +47,7 @@ export default function About() {
                             <span className={styles.check}>✓</span> Equipe Especializada
                         </div>
                     </div>
-                    <a href="#contato" className="btn btn-primary mt-8">
+                    <a href="#contato" className="btn btn-primary mt-12">
                         Falar com um Mecânico
                     </a>
                 </RevealWrapper>

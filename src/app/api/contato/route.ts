@@ -29,6 +29,18 @@ function saveLeads(leads: LeadData[]) {
     fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2), 'utf-8');
 }
 
+export async function GET() {
+    try {
+        const leads = getLeads();
+        return NextResponse.json({ leads }, { status: 200 });
+    } catch {
+        return NextResponse.json(
+            { error: 'Erro ao buscar contatos' },
+            { status: 500 }
+        );
+    }
+}
+
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();

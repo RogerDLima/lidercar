@@ -34,7 +34,10 @@
   --font-text: "Poppins", sans-serif;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -43,7 +46,8 @@ body {
   font-family: var(--font-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  /* Allow vertical pan scrolling on touch devices — do NOT set overflow: hidden on html */
+  touch-action: pan-y;
   /* Prevents iOS pull-to-refresh that caused unwanted page reloads on mobile */
   overscroll-behavior-y: none;
 }
