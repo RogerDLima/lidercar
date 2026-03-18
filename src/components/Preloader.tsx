@@ -7,13 +7,20 @@ export default function Preloader() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate load time to ensure the animation is seen for a bit
-        // or tie it to window.onload
+        // Bloqueia o scroll do body enquanto o preloader está ativo
+        document.body.style.overflow = "hidden";
+
         const timer = setTimeout(() => {
+            // Libera o scroll assim que o preloader termina
+            document.body.style.overflow = "";
             setLoading(false);
         }, 2500);
 
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(timer);
+            // Garante que o scroll seja sempre liberado ao desmontar
+            document.body.style.overflow = "";
+        };
     }, []);
 
     if (!loading) return null;
