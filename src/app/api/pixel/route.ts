@@ -1,24 +1,35 @@
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { NextRequest, NextResponse } from 'next/server';
+import { getStore } from '@netlify/blobs';
 
-const PIXEL_FILE = path.join(process.cwd(), 'meta-pixel.json');
+async function getSettingsStore() {
+    try {
+        return getStore({ name: 'settings', consistency: 'strong' });
+    } catch {
+        return null;
+    }
+}
 
 export async function GET() {
     try {
-        const data = fs.readFileSync(PIXEL_FILE, 'utf-8');
-        return NextResponse.json(JSON.parse(data));
-    } catch (e) {
+        const store = await getSettingsStore();
+        if (!store) return NextResponse.json({ id: null });
+
+        const data = await store.get('pixel', { type: 'json' }) as { id: string } | null;
+        return NextResponse.json(data ?? { id: null });
+    } catch {
         return NextResponse.json({ id: null });
     }
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
     try {
         const { id } = await req.json();
-        fs.writeFileSync(PIXEL_FILE, JSON.stringify({ id }), 'utf-8');
+        const store = await getSettingsStore();
+        if (store) {
+            await store.setJSON('pixel', { id });
+        }
         return NextResponse.json({ success: true, id });
-    } catch (e) {
-        return NextResponse.json({ error: 'Failed to write setting' }, { status: 500 });
+    } catch {
+        return NextResponse.json({ error: 'Failed to save setting' }, { status: 500 });
     }
 }

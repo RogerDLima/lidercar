@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getStore } from '@netlify/blobs';
 
 interface LeadData {
     nome: string;
@@ -11,33 +10,23 @@ interface LeadData {
     criadoEm: string;
 }
 
-const LEADS_FILE = path.join(process.cwd(), 'leads.json');
-
-function getLeads(): LeadData[] {
+async function getStore_safe() {
     try {
-        if (fs.existsSync(LEADS_FILE)) {
-            const raw = fs.readFileSync(LEADS_FILE, 'utf-8');
-            return JSON.parse(raw);
-        }
+        return getStore({ name: 'contato', consistency: 'strong' });
     } catch {
-        // File doesn't exist or is corrupted, start fresh
+        return null;
     }
-    return [];
-}
-
-function saveLeads(leads: LeadData[]) {
-    fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2), 'utf-8');
 }
 
 export async function GET() {
     try {
-        const leads = getLeads();
-        return NextResponse.json({ leads }, { status: 200 });
+        const store = await getStore_safe();
+        if (!store) return NextResponse.json({ leads: [] });
+
+        const blob = await store.get('leads', { type: 'json' }) as LeadData[] | null;
+        return NextResponse.json({ leads: blob ?? [] });
     } catch {
-        return NextResponse.json(
-            { error: 'Erro ao buscar contatos' },
-            { status: 500 }
-        );
+        return NextResponse.json({ leads: [] });
     }
 }
 
@@ -46,7 +35,6 @@ export async function POST(request: NextRequest) {
         const body = await request.json();
         const { nome, email, telefone, veiculo, mensagem } = body;
 
-        // Basic validation
         if (!nome || !email || !telefone || !mensagem) {
             return NextResponse.json(
                 { error: 'Campos obrigatórios: nome, email, telefone, mensagem' },
@@ -63,9 +51,13 @@ export async function POST(request: NextRequest) {
             criadoEm: new Date().toISOString(),
         };
 
-        const leads = getLeads();
-        leads.push(lead);
-        saveLeads(leads);
+        const store = await getStore_safe();
+        if (store) {
+            const existing = await store.get('leads', { type: 'json' }) as LeadData[] | null;
+            const leads: LeadData[] = existing ?? [];
+            leads.push(lead);
+            await store.setJSON('leads', leads);
+        }
 
         return NextResponse.json(
             { success: true, message: 'Lead capturado com sucesso!' },

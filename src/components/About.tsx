@@ -47,7 +47,12 @@ export default function About() {
                             <span className={styles.check}>✓</span> Equipe Especializada
                         </div>
                     </div>
-                    <a href="#contato" className="btn btn-primary mt-12">
+                    <a
+                        href="https://wa.me/553198583809?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20mec%C3%A2nico%20da%20LiderCar.%20Podem%20me%20ajudar%3F"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary mt-16"
+                    >
                         Falar com um Mecânico
                     </a>
                 </RevealWrapper>
